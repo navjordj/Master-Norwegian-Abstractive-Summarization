@@ -1,0 +1,6 @@
+git+https://github.com/huggingface/transformers
+datasets
+sentencepiece
+sacrebleu
+evaluate
+huggingface_hub
