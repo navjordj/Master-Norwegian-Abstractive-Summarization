@@ -5,3 +5,9 @@ sacrebleu
 evaluate
 huggingface_hub
 nltk
+rouge_score
+accelerate
+protobuf
+rouge-score
+py7zr
+evaluate
