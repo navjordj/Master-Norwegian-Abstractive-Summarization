@@ -2,3 +2,4 @@
 /scraping/snl/chromedriver.exe
 /vg_nak_dataset/data
 /vg_nak_dataset/vg_nob_nak
+datasets/snl/snl_valid_urls.csv
