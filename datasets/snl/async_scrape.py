@@ -62,7 +62,7 @@ def main():
 
                 # Filter out short articles
                 
-                if len(ingress) < 150 or len(article) < 400:
+                if len(ingress) < 100 or len(article) < 400:
                     continue
 
                 category = get_categories(site)
