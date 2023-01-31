@@ -26,9 +26,9 @@ def get_categories(site) -> str:
 def main():
 
 
-    urls_df = pd.read_csv(r"C:\Users\navjo\Documents\summarization_master\datasets\snl\snl_valid_urls.csv", index_col=0)
+    urls_df = pd.read_csv(r"C:\Users\jorgen\Documents\summarization_master\datasets\snl\snl_valid_urls.csv", index_col=0)
 
-    snl_urls = urls_df["url"].values
+    snl_urls = urls_df["url"].values# [:100]
 
     urls = []
     headlines = []
@@ -48,7 +48,7 @@ def main():
         rs = (grequests.get(u) for u in url_batch)
         responses = grequests.map(rs)
 
-        for r in responses:
+        for i, r in enumerate(responses):
             if r and r.status_code == 200:
                 site = bs4.BeautifulSoup(r.text)
 
@@ -78,7 +78,7 @@ def main():
 
 
             else:
-                print(f"Error fetching URL: {r.url if r else None}")
+                print(f"Error fetching URL: {r.url if r else None}, {url_batch[i]}")
 
 
     date = dt.datetime.now().strftime("%Y-%m-%d")
