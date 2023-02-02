@@ -5,3 +5,6 @@
 datasets/snl/snl_valid_urls.csv
 nowiki-20230120-pages-articles.xml
 nowiki-20230120-abstract.xml
+/datasets/vg_nak_dataset/vg_summarization.csv
+/datasets/snl/sitemaps
+/datasets/snl/snl.csv
