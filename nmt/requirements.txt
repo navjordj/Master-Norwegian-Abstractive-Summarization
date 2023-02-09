@@ -1,3 +1,2 @@
 datasets
-sacremoses
-transformers
+websocket-client
