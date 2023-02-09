@@ -4,6 +4,7 @@ DATASET_NAME = "cnn_dailymail"
 CONFIG = "3.0.0"
 
 NMT_MODEL_NAME = "jkorsvik/opus-mt-eng-nor"
+NMT_MODEL_NAME = "Helsinki-NLP/opus-mt-en-mul"
 NMT_MODEL_CONFIG = {}
 BATCH_SIZE = 1
 
