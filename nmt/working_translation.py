@@ -166,6 +166,13 @@ def third_v():
 
 print(second_v())
 
-import pandas as pd
-df = pd.DataFrame({"article": articles, "highlights": highlights, "id": id})
-df.to_csv("translated_test.csv", index=False)
+
+
+def save_json_gz(obj, filepath):
+    import gzip
+    import json
+
+    json_str = json.dumps(obj)
+    json_bytes = json_str.encode()
+    with gzip.GzipFile(filepath, mode="w") as f:
+        f.write(json_bytes)
