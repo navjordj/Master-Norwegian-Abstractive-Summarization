@@ -2,3 +2,10 @@ datasets
 sacremoses
 sentencepiece
 transformers
+onnxruntime-gpu
+torch
+torchvision
+torchaudio
+onnx
+huggingface_hub
+#accelerator
