@@ -1,0 +1,7 @@
+git+https://github.com/huggingface/transformers
+sentencepiece
+sacrebleu
+evaluate
+huggingface_hub
+nltk
+rouge_score

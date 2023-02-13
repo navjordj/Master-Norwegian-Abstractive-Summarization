@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 
 WORKDIR /
 
-ADD training root/training
+ADD training tmp/training
