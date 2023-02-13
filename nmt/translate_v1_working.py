@@ -7,7 +7,9 @@ import time
 import os
 from typing import List, Dict
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from transformers.pipelines.pt_utils import KeyDataset
 from tqdm import tqdm
+#import nltk
 import argparse
 DATASET_NAME = "cnn_dailymail"
 CONFIG = "3.0.0"
@@ -27,7 +29,10 @@ UNKOWN_TOKEN = "<unk>"
 SPLIT_PATTERN = "(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s"
 
 MAX_INPUT_LENGTH = 512
-BATCH_SIZE = 64
+BATCH_SIZE = 8
+
+
+#DATA_KEY = "article"
 
 outputdir = ""
 
@@ -43,6 +48,7 @@ def parse_args():
                         help="Output directory.")
     parser.add_argument("-b", "--batchsize", default=BATCH_SIZE, type=int,
                         help="Output directory.")
+    #parser.add_argument("-k", "--data_key", default=DATA_KEY, type=str, help="Output directory.")
     return parser.parse_args()
 
 
@@ -59,6 +65,7 @@ device = "cuda:0" if torch.cuda.is_available() else "cpu"
 model.to(device)
 
 
+
 def clean_up_string(string):  # : str) -> str:
     return [TRANSLATION_PREFIX + sentence.strip() for sentence in re.split(
             SPLIT_PATTERN, string)]
@@ -70,6 +77,9 @@ def clean_up_example(sample):  # : dict[str, str]) -> dict[str, list[str]]:
     stream = []
     # for article, highlights in zip(batch["article"], batch["highlights"]):
     stream.extend(clean_up_string(sample["article"]))
+    #stream.extend(clean_up_string(sample[DATA_KEY]))
+
+    
     stream.extend("[<stop_artoken>]")
     stream.extend(clean_up_string(sample["highlights"]))
     stream.extend("[<stop_hightoken>]")
@@ -89,6 +99,7 @@ def translate_batch(inp: str) -> List[str]:
         input_tokens = tokenizer.batch_encode_plus(
             batch,
             return_tensors="pt",
+            truncation=True,
             padding="max_length",
             max_length=MAX_INPUT_LENGTH
         )
@@ -97,14 +108,15 @@ def translate_batch(inp: str) -> List[str]:
         for t in input_tokens:
             if torch.is_tensor(input_tokens[t]):
                 input_tokens[t] = input_tokens[t].to(device)
-        outputs = model.generate(
-            **input_tokens,
-            use_cache=True,
-            num_beams=1,
-            min_length=2,
-            # max_length=MAX_INPUT_LENGTH,
-            no_repeat_ngram_size=3,
-        )
+        with torch.no_grad():
+            outputs = model.generate(
+                **input_tokens,
+                #use_cache=True,
+                num_beams=1,
+                #min_length=2,
+                # max_length=MAX_INPUT_LENGTH,
+                #no_repeat_ngram_size=3,
+            )
         outputs = tokenizer.batch_decode(outputs, skip_special_tokens=True)
         #outputs = pipe(split_input)["generated_text"]
         translated_out += " " + " ".join(outputs)
@@ -124,7 +136,7 @@ articles = []
 highlights = []
 id = []
 
-dataset_dict = {"train": {"length": 287113, "data": None}, "valid": {
+dataset_dict = {"train": {"length": 287113, "data": None}, "validation": {
     "length": 13368, "data": None}, "test": {"length": 11490, "data": None}}
 
 
@@ -135,9 +147,9 @@ def translate_dataset(dataset):
         articles.append(temp_dict["article"])
         highlights.append(temp_dict["highlights"])
         id.append(temp_dict["id"])
-        print(temp_dict)
-        if i == 10:
-            break
+        # print(temp_dict)
+        #if i == 100:
+        #    break
 
 
     df = pd.DataFrame({"article": articles, "highlights": highlights, "id": id})
@@ -150,5 +162,6 @@ if __name__ == "__main__":
     outputdir = args.output_dir
     CONFIG = args.config
     BATCH_SIZE = args.batchsize
+    #DATA_KEY = args.data_key
     dataset = load_dataset(DATASET_NAME, CONFIG, split=SPLIT)
     translate_dataset(dataset)
