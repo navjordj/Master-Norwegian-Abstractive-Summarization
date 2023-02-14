@@ -148,7 +148,6 @@ class localtranslate():
             if batch_of_batches == BATCH_SIZE:
                 print(self.translate(batch_of_batches))
                 batch_of_batches = []
-                break
 
         print("--------------------------------------------------")
 

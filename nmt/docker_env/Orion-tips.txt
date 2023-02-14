@@ -1,0 +1,48 @@
+_Pålogging_
+Fra Mac bruker jeg ssh for innlogging, mens fra Windows er Putty mest brukt. Min innlogging:
+ssh kristl@login.orion.nmbu.no
+
+_Filoverføring_
+For overføring av filer bruker jeg vanligvis en FTP-klient. Ved overføring av små filer, kan en bruke samme login som over mens større filer skal tas gjennom filemanager.orion.nmbu.no, det vil si host: filemanager.orion.nmbu.no, username kristl og port 22 for min del for FTP.
+
+_Bygge container_
+Tilpass og last opp my_container.def, last opp slurm_create_singularity_container.sh.
+Fra ssh/putty (I samme katalog som skriptene) kjør
+sbatch slurm_create_singularity.sh my_container.def
+
+_Sjekke kø_
+Sjekke min kø:
+squeue -u kristl
+Sjekke GPU-kø:
+squeue -p gpu
+Sjekke alle køer:
+squeue
+
+_Drepe jobb_
+scancel jobbnavn/nummer
+
+_Generelt_
+Se på Giorgio_tuning.sh for kjøring på GPU. Legg spesielt merke til siste linje hvor "singularity exec" er fast, så kommer navnet på containeren, så python-kallet.
+Se på TM_tuning.sh for kjøring på CPU.
+
+Jørgens notater:
+_Bygging og pushing av docker-container_
+docker build -t navjordj/t5 .
+docker push navjordj/t5
+
+_Henting og kjøring av docker-container fra dockerhub_
+singularity pull --force docker://navjordj/t5:latest, --force for å overskrive
+singularity exec --fakeroot t5_latest.sif
+
+_Interactive session med gpu som starter i container_
+srun -p gpu --gres=gpu:1 --pty singularity exec -c --nv --fakeroot t5_latest.sif bash
+
+srun -p smallmem --pty singularity run -c --nv --fakeroot t5_latest.sif bash
+srun -p smallmem --pty singularity run --fakeroot t5_latest.sif bash
+
+
+_uten gpu_
+srun -p smallmem --pty singularity exec -c --nv t5_latest.sif bash
+
+
+ srun -p gpu --gres=gpu:1 --pty singularity run --fakeroot t5_latest.sif bash
