@@ -17,7 +17,7 @@ CONFIG = "3.0.0"
 #NMT_MODEL_NAME = "Helsinki-NLP/opus-mt-en-mul"
 NMT_MODEL_NAME = "jkorsvik/opus-mt-eng-nor"
 NMT_MODEL_CONFIG = {}
-SPLIT = "test"
+SPLIT = "train"
 
 TRANSLATION_PREFIX = ">>nob<< "
 PADDING_VALUE = 54775
@@ -140,7 +140,7 @@ dataset_dict = {"train": {"length": 287113, "data": None}, "validation": {
     "length": 13368, "data": None}, "test": {"length": 11490, "data": None}}
 
 
-def translate_dataset(dataset):
+def translate_dataset(dataset, file_name):
     for i, out in enumerate(tqdm(dataset, total=dataset_dict[SPLIT]["length"])):
 
         temp_dict = translate_sample(out)
@@ -157,11 +157,16 @@ def translate_dataset(dataset):
 
 if __name__ == "__main__":
     args = parse_args()
+    indexes = [0,13000, 23000, 33000, 45000]
+    
+    file_id=1
+    indices = f"[{indexes[file_id-1]}:{indexes[file_id]}]"
     DATASET_NAME = args.dataset_name
-    SPLIT = args.split
+    SPLIT = args.split + indices
     outputdir = args.output_dir
     CONFIG = args.config
     BATCH_SIZE = args.batchsize
+    print(SPLIT)
     #DATA_KEY = args.data_key
     dataset = load_dataset(DATASET_NAME, CONFIG, split=SPLIT)
-    translate_dataset(dataset)
+    translate_dataset(dataset, file_name=f"translated_{SPLIT}.csv")
