@@ -189,7 +189,7 @@ if __name__ == "__main__":
     indexes = [0,13000, 23000, 33000, 45000]
 
     dataset_name = "cnn_dailymail"
-    file_id=1
+    file_id=3
     data_type = "train"
     file_folder_drive = "cnn_dailymail"
     data_range_to_translate= f"[{indexes[file_id-1]}:{indexes[file_id]}]"

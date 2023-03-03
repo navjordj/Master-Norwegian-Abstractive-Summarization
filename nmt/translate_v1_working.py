@@ -141,7 +141,7 @@ dataset_dict = {"train": {"length": 287113, "data": None}, "validation": {
 
 
 def translate_dataset(dataset, file_name):
-    for i, out in enumerate(tqdm(dataset, total=dataset_dict[SPLIT]["length"])):
+    for i, out in enumerate(tqdm(dataset, total=dataset.num_rows)):
 
         temp_dict = translate_sample(out)
         articles.append(temp_dict["article"])
@@ -153,13 +153,13 @@ def translate_dataset(dataset, file_name):
 
 
     df = pd.DataFrame({"article": articles, "highlights": highlights, "id": id})
-    df.to_csv(outputdir + f"translated_test.csv", index=False)
+    df.to_csv(outputdir + file_name, index=False)
 
 if __name__ == "__main__":
     args = parse_args()
-    indexes = [0,13000, 23000, 33000, 45000]
+    indexes = [0,100,200,5000, 10000, 12000,13000, 15500, 18000, 20500, 23000, 25500, 33000, 45000, 67000, 69000]
     
-    file_id=1
+    file_id=-1
     indices = f"[{indexes[file_id-1]}:{indexes[file_id]}]"
     DATASET_NAME = args.dataset_name
     SPLIT = args.split + indices
