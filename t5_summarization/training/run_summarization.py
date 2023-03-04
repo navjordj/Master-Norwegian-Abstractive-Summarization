@@ -29,6 +29,8 @@ import nltk  # Here to have a nice missing dependency error message early on
 import numpy as np
 from datasets import load_dataset
 
+import yaml
+
 import evaluate
 import transformers
 from filelock import FileLock
@@ -45,6 +47,7 @@ from transformers import (
     Seq2SeqTrainer,
     Seq2SeqTrainingArguments,
     set_seed,
+    EarlyStoppingCallback
 )
 from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version, is_offline_mode, send_example_telemetry
@@ -643,6 +646,7 @@ def main():
         tokenizer=tokenizer,
         data_collator=data_collator,
         compute_metrics=compute_metrics if training_args.predict_with_generate else None,
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=2)]
     )
 
     # Training
@@ -733,4 +737,13 @@ def _mp_fn(index):
 
 
 if __name__ == "__main__":
-    main()
+    main()  
+
+
+    if os.path.exists('vast_key.yaml'):
+        with open("vast_key.yaml", "r") as f:
+            yaml_dict = yaml.load(f, Loader = yaml.loader.SafeLoader)
+            vast_api_key, instance_id = yaml_dict["key"], yaml_dict["instance"]
+
+            os.system(f"./vast destroy instance {instance_id} --api-key {vast_api_key}")
+
