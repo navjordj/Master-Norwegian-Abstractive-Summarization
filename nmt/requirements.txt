@@ -2,3 +2,9 @@ datasets
 sacremoses
 sentencepiece
 transformers
+onnxruntime-gpu
+onnx
+huggingface_hub
+accelerator
+thai_segmenter
+nltk
