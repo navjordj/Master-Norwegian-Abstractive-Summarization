@@ -53,6 +53,9 @@ from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version, is_offline_mode, send_example_telemetry
 from transformers.utils.versions import require_version
 
+import torch
+
+torch.set_num_threads(8)
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.27.0.dev0")
@@ -637,6 +640,7 @@ def main():
         result["gen_len"] = np.mean(prediction_lens)
         return result
 
+
     # Initialize our Trainer
     trainer = Seq2SeqTrainer(
         model=model,
@@ -679,7 +683,7 @@ def main():
     num_beams = data_args.num_beams if data_args.num_beams is not None else training_args.generation_num_beams
     if training_args.do_eval:
         logger.info("*** Evaluate ***")
-        metrics = trainer.evaluate(max_length=max_length, num_beams=num_beams, metric_key_prefix="eval")
+        metrics = trainer.evaluate(max_length=max_length, num_beams=num_beams, metric_key_prefix="eval", repetition_penalty=1.2)
         max_eval_samples = data_args.max_eval_samples if data_args.max_eval_samples is not None else len(eval_dataset)
         metrics["eval_samples"] = min(max_eval_samples, len(eval_dataset))
 
@@ -740,10 +744,15 @@ if __name__ == "__main__":
     main()  
 
 
-    if os.path.exists('vast_key.yaml'):
-        with open("vast_key.yaml", "r") as f:
-            yaml_dict = yaml.load(f, Loader = yaml.loader.SafeLoader)
-            vast_api_key, instance_id = yaml_dict["key"], yaml_dict["instance"]
+    with open("vast_key.yaml", "r") as f:
+        yaml_dict = yaml.load(f, Loader = yaml.loader.SafeLoader)
+        vast_api_key = yaml_dict["key"]
 
+        instance_id = os.environ["CONTAINER_ID"].split(".")[1]
+
+        if vast_api_key != None:
+            print("destroying instance")
             os.system(f"./vast destroy instance {instance_id} --api-key {vast_api_key}")
+        else:
+            print("not destroying instance")
 
