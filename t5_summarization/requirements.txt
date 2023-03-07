@@ -13,3 +13,4 @@ protobuf
 rouge-score
 py7zr
 evaluate
+wandb
