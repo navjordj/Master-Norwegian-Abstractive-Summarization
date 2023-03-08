@@ -57,6 +57,10 @@ import torch
 
 torch.set_num_threads(8)
 
+import os
+os.environ["OMP_NUM_THREADS"] = "8"
+
+
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.27.0.dev0")
 
