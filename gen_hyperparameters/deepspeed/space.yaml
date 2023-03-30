@@ -1,0 +1,52 @@
+dataset: "navjordj/SNL_summarization"
+model_name: "navjordj/t5-base-snl"
+n_samples: 5
+default_batch_size: 2
+
+max_length: 150
+configs:
+
+  greedy_config:
+
+  beam_search_6:
+  - num_beams: 6
+
+  beam_search_12:
+  - num_beams: 12
+
+  beam_search_6_ngram_3:
+  - num_beams: 6
+  - no_repeat_ngram_size: 3
+
+  beam_search_12_ngram_3:
+  - num_beams: 12
+  - no_repeat_ngram_size: 3
+
+  beam_search_6_ngram_5:
+  - num_beams: 6
+  - no_repeat_ngram_size: 5
+
+  beam_search_12_ngram_5:
+  - num_beams: 12
+  - no_repeat_ngram_size: 5
+
+  beam_search_6_grouped:
+  - num_beams: 6
+  - num_beam_groups: 6
+
+  sample_top_k_50:
+  - do_sample: True
+  - top_k: 50
+
+  sample_temperature_07_top_k_50:
+  - temperature: 0.7
+  - do_sample: True
+  - top_k: 50
+
+  top_p_07:
+  - top_p: 0.7
+  - do_sample: True
+
+  top_p_095:
+  - top_p: 0.95
+  - do_sample: True
