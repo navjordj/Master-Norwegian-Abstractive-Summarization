@@ -14,8 +14,16 @@ import tqdm
 
 import deepspeed
 
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-print(device)
+import random
+
+deepspeed.init_distributed()
+
+local_rank = int(os.getenv("LOCAL_RANK", "0"))
+world_size = int(os.getenv("WORLD_SIZE", "1"))
+# create the model pipeline
+
+print(f"Local rank: {local_rank}, world size: {world_size}")
+
 
 # Read the content from space.yaml
 with open('space.yaml', 'r') as file:
@@ -33,7 +41,6 @@ max_length = parsed_yaml['max_length']
 
 # Add max_length to all configs and create a list of dictionaries
 config_dicts = []
-print(parsed_yaml)
 for key, value in parsed_yaml['configs'].items():
     config_dict = {'name': key}
     
@@ -53,9 +60,6 @@ for key, value in parsed_yaml['configs'].items():
     config_dict['config'] = config
     config_dicts.append(config_dict)
 
-print("Configurations:")
-pprint(config_dicts)
-
 validation_set = load_dataset(validation_set_name, split="validation")
 validation_set = validation_set.select(list(range(n_samples))) if n_samples else validation_set
 print(validation_set)
@@ -66,13 +70,6 @@ metric = evaluate.load("rouge")
 model = T5ForConditionalGeneration.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-local_rank = int(os.getenv("LOCAL_RANK", "0"))
-world_size = int(os.getenv("WORLD_SIZE", "1"))
-# create the model pipeline
-
-
-ds_engine = deepspeed.init_inference(model)
-
 
 task_evaluator = evaluator("summarization")
 
@@ -82,12 +79,12 @@ for config in tqdm.tqdm(config_dicts):
     print(config)
     pipe = pipeline("summarization", model=model, tokenizer=tokenizer, device=local_rank, **config["config"])
 
-    pipe.model = deepspeed.init_inference(
-        pipe.model,
-        mp_size=world_size,
-        dtype=torch.float
-    )
-
+    pipe.model = deepspeed.init_inference(pipe.model,
+            dtype=torch.float16,
+            mp_size=world_size,
+            replace_with_kernel_inject=True,
+            max_tokens=1024,
+        )
 
     results = task_evaluator.compute(
         model_or_pipeline=pipe,
@@ -98,5 +95,28 @@ for config in tqdm.tqdm(config_dicts):
     )
 
     results_df = results_df.append({"config": config, **results}, ignore_index=True)
+    
+# Convert the DataFrame to a string
+results_str = "test" # results_df.to_csv(index=False)
+results_tensor = torch.tensor(bytearray(results_str, 'utf-8'), dtype=torch.uint8, device=local_rank)
 
-results_df.to_csv(rf"{validation_set_name}_{model_name}_results.csv".replace("/", "_"))
+# Get the length of the results tensor on each GPU
+tensor_lengths = [torch.tensor(len(results_tensor), dtype=torch.int64, device=local_rank) for _ in range(world_size)]
+dist.all_gather(tensor_lengths, torch.tensor(len(results_tensor), dtype=torch.int64, device=local_rank))
+
+gathered_tensors = [torch.empty(length.item(), dtype=torch.uint8, device=local_rank) for length in tensor_lengths]
+
+#All_gather the results from each GPU
+dist.all_gather(gathered_tensors, results_tensor)
+
+#Decode the results and concatenate the DataFrames
+gathered_results = [pd.read_csv(torch.ByteStorage.from_buffer(tensor.cpu().numpy().tobytes())) for tensor in gathered_tensors]
+
+#Save results to a single file if this is the main process (rank 0)
+if local_rank == 0:
+    final_results_df = pd.concat(gathered_results, ignore_index=True)
+    final_results_df.to_csv(rf"{random.random()}{validation_set_name}{model_name}results.csv".replace("/", ""))
+
+
+
+
