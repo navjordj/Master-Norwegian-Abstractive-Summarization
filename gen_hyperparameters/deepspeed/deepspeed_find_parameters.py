@@ -97,25 +97,32 @@ for config in tqdm.tqdm(config_dicts):
     results_df = results_df.append({"config": config, **results}, ignore_index=True)
     
 # Convert the DataFrame to a string
-results_str = "test" # results_df.to_csv(index=False)
+results_str = results_df.to_csv(index=False)
 results_tensor = torch.tensor(bytearray(results_str, 'utf-8'), dtype=torch.uint8, device=local_rank)
 
 # Get the length of the results tensor on each GPU
 tensor_lengths = [torch.tensor(len(results_tensor), dtype=torch.int64, device=local_rank) for _ in range(world_size)]
-dist.all_gather(tensor_lengths, torch.tensor(len(results_tensor), dtype=torch.int64, device=local_rank))
+torch.distributed.all_gather(tensor_lengths, torch.tensor(len(results_tensor), dtype=torch.int64, device=local_rank))
 
 gathered_tensors = [torch.empty(length.item(), dtype=torch.uint8, device=local_rank) for length in tensor_lengths]
 
 #All_gather the results from each GPU
-dist.all_gather(gathered_tensors, results_tensor)
+torch.distributed.all_gather(gathered_tensors, results_tensor)
 
 #Decode the results and concatenate the DataFrames
-gathered_results = [pd.read_csv(torch.ByteStorage.from_buffer(tensor.cpu().numpy().tobytes())) for tensor in gathered_tensors]
+from io import BytesIO
+
+gathered_results = [pd.read_csv(BytesIO(tensor.cpu().numpy().tobytes())) for tensor in gathered_tensors]
+
 
 #Save results to a single file if this is the main process (rank 0)
 if local_rank == 0:
     final_results_df = pd.concat(gathered_results, ignore_index=True)
-    final_results_df.to_csv(rf"{random.random()}{validation_set_name}{model_name}results.csv".replace("/", ""))
+    final_results_df.to_csv(rf"per_process_{validation_set_name}{model_name}results.csv".replace("/", ""))
+    
+    averaged_results_df = final_results_df.groupby("config", as_index=False).mean()
+
+    averaged_results_df.to_csv(rf"averaged_{random.random()}{validation_set_name}{model_name}results.csv".replace("/", ""))
 
 
 

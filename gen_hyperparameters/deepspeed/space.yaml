@@ -1,14 +1,28 @@
 dataset: "navjordj/SNL_summarization"
 model_name: "navjordj/t5-base-snl"
-n_samples: 10
-default_batch_size: 8
+n_samples:
+default_batch_size: 1
 
 max_length: 150
 configs:
 
-  greedy_config:
-
-
   sample_top_k_50:
   - do_sample: True
   - top_k: 50
+  - no_repeat_ngram_size: 4
+
+  sample_temperature_07_top_k_50:
+  - temperature: 0.7
+  - do_sample: True
+  - top_k: 50
+
+  top_p_07:
+  - top_p: 0.7
+  - do_sample: True
+
+  top_p_095:
+  - top_p: 0.95
+  - do_sample: True
+
+  greedy_config:
+
