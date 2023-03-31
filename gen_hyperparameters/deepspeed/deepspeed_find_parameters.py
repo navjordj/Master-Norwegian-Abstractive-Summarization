@@ -136,7 +136,10 @@ if parsed_yaml.get('stop_instance', None):
 
     instance_id = os.environ["CONTAINER_ID"].split(".")[1]
 
-    vast_api_key = ""
+    try:
+        vast_api_key = parsed_yaml.get('vast_api_key')
+    except:
+        raise ValueError("Ingen VAST API nøkkel oppgitt")
 
     if vast_api_key != None:
         print("destroying instance")

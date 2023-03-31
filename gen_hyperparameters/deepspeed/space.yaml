@@ -1,3 +1,6 @@
+stop_instance:
+vast_api_key: "fyll inn"
+
 dataset: "navjordj/SNL_summarization"
 model_name: "navjordj/t5-base-snl"
 n_samples:
@@ -6,12 +9,46 @@ default_batch_size: 1
 max_length: 150
 configs:
 
+  base_config:
+  - max_length: 150
+  - num_beams: 1
+  - num_beam_groups: 1
+  - do_sample: False
+  - no_repeat_ngram_size: 0
+  - encoder_no_repeat_ngram_size: 0
+  - temperature: 1
+  - top_k: 50
+  - top_p: 1.0
+  - repetition_penalty: 1.0
+  - eta_cutoff: 0.0 # https://arxiv.org/pdf/2210.15191.pdf
+
+  greedy:
+
+  greedy_no_repeat_ngram_size_3:
+  - no_repeat_ngram_size: 3
+
+  greedy_no_repeat_ngram_size_5:
+  - no_repeat_ngram_size: 5
+
+  greedy_encoder_no_repeat_ngram_size_3:
+  - encoder_no_repeat_ngram_size: 3
+
+  greedy_encoder_no_repeat_ngram_size_5:
+  - encoder_no_repeat_ngram_size: 5
+
+  greedy_repetition_12:
+  - repetition_penalty: 1.2
+
   sample_top_k_50:
   - do_sample: True
   - top_k: 50
-  - no_repeat_ngram_size: 4
 
   sample_temperature_07_top_k_50:
+  - temperature: 0.7
+  - do_sample: True
+  - top_k: 50
+
+  sample_temperature_09_top_k_50:
   - temperature: 0.7
   - do_sample: True
   - top_k: 50
@@ -24,5 +61,7 @@ configs:
   - top_p: 0.95
   - do_sample: True
 
-  greedy_config:
+
+  
+
 
