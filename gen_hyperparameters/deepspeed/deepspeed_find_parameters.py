@@ -12,11 +12,15 @@ import torch
 import pandas as pd
 import tqdm
 
-import deepspeed
+from collections import ChainMap
+
+
  
 import random
 
+import deepspeed
 deepspeed.init_distributed()
+
 
 local_rank = int(os.getenv("LOCAL_RANK", "0"))
 world_size = int(os.getenv("WORLD_SIZE", "1"))
@@ -28,36 +32,26 @@ print(f"Local rank: {local_rank}, world size: {world_size}")
 # Read the content from space.yaml
 with open('space.yaml', 'r') as file:
     yaml_content = file.read()
-
 parsed_yaml = yaml.safe_load(yaml_content)
 
 n_samples = parsed_yaml.get('n_samples', None)
-default_batch_size = parsed_yaml.get('default_batch_size', None)
 validation_set_name = parsed_yaml["dataset"]
 model_name = parsed_yaml["model_name"]
 
 
-max_length = parsed_yaml['max_length']
+base_config = dict(ChainMap(*parsed_yaml["base_config"]))
 
 # Add max_length to all configs and create a list of dictionaries
 config_dicts = []
-#print(parsed_yaml)
 for key, value in parsed_yaml['configs'].items():
     config_dict = {'name': key}
     
     # TODO: Skriv om
-    config = {}
+    config = base_config.copy()
     if value:
         for spec in value:
-            print(spec)
             key, val = spec.popitem()
             config[key] = val
-
-
-    config['max_length'] = max_length
-
-    if "batch_size" not in config:
-        config["batch_size"] = default_batch_size
 
 
 
@@ -72,7 +66,7 @@ validation_set = validation_set.select(list(range(n_samples))) if n_samples else
 print(validation_set)
 
 
-metric = evaluate.load("rouge")
+metric = evaluate.load("rouge", use_stemmer=True)
 
 model = T5ForConditionalGeneration.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -80,10 +74,11 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 task_evaluator = evaluator("summarization")
 
-results_df = pd.DataFrame(columns=["config", 'rouge1','rouge2', 'rougeL', 'rougeLsum', 'total_time_in_seconds', 'samples_per_second'])
+results_df = pd.DataFrame(columns=["name", "config", 'rouge1','rouge2', 'rougeL', 'rougeLsum', 'total_time_in_seconds', 'samples_per_second'])
 
 for config in tqdm.tqdm(config_dicts):
     print(config)
+    # TODO Deepspeed error try/except when using pipeline
     pipe = pipeline("summarization", model=model, tokenizer=tokenizer, device=local_rank, **config["config"])
 
     pipe.model = deepspeed.init_inference(pipe.model,
@@ -92,6 +87,7 @@ for config in tqdm.tqdm(config_dicts):
             replace_with_kernel_inject=True,
             max_tokens=1024,
         )
+        
 
     results = task_evaluator.compute(
         model_or_pipeline=pipe,
@@ -100,8 +96,8 @@ for config in tqdm.tqdm(config_dicts):
         label_column="ingress",
         metric=metric
     )
-
-    results_df = results_df.append({"config": config, **results}, ignore_index=True)
+    print(results)
+    results_df = results_df.append({"name": config["name"], "config": config["config"], **results}, ignore_index=True)
     
 # Convert the DataFrame to a string
 results_str = results_df.to_csv(index=False)
@@ -129,10 +125,10 @@ if local_rank == 0:
     
     averaged_results_df = final_results_df.groupby("config", as_index=False).mean()
 
-    averaged_results_df.to_csv(rf"averaged_{random.random()}{validation_set_name}{model_name}results.csv".replace("/", ""))
+    averaged_results_df.to_csv(rf"{validation_set_name}{model_name}_results.csv".replace("/", ""))
 
 
-if parsed_yaml.get('stop_instance', None):
+if parsed_yaml.get('stop_instance', False):
 
     instance_id = os.environ["CONTAINER_ID"].split(".")[1]
 
