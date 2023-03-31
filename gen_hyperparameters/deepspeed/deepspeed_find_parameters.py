@@ -13,7 +13,7 @@ import pandas as pd
 import tqdm
 
 import deepspeed
-
+ 
 import random
 
 deepspeed.init_distributed()
@@ -130,3 +130,16 @@ if local_rank == 0:
     averaged_results_df = final_results_df.groupby("config", as_index=False).mean()
 
     averaged_results_df.to_csv(rf"averaged_{random.random()}{validation_set_name}{model_name}results.csv".replace("/", ""))
+
+
+if parsed_yaml.get('stop_instance', None):
+
+    instance_id = os.environ["CONTAINER_ID"].split(".")[1]
+
+    vast_api_key = ""
+
+    if vast_api_key != None:
+        print("destroying instance")
+        os.system(f"./vast stop instance {instance_id} --api-key {vast_api_key}")
+else:
+    print("not destroying instance")
