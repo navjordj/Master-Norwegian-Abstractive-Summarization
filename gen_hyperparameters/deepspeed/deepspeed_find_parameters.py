@@ -41,15 +41,19 @@ max_length = parsed_yaml['max_length']
 
 # Add max_length to all configs and create a list of dictionaries
 config_dicts = []
+#print(parsed_yaml)
 for key, value in parsed_yaml['configs'].items():
     config_dict = {'name': key}
     
-    # Handle cases where no parameters are given
-    if value is not None:
-        config = value[0]
-    else:
-        config = {}
-    
+    # TODO: Skriv om
+    config = {}
+    if value:
+        for spec in value:
+            print(spec)
+            key, val = spec.popitem()
+            config[key] = val
+
+
     config['max_length'] = max_length
 
     if "batch_size" not in config:
@@ -59,6 +63,9 @@ for key, value in parsed_yaml['configs'].items():
 
     config_dict['config'] = config
     config_dicts.append(config_dict)
+
+print("Configurations:")
+pprint(config_dicts)
 
 validation_set = load_dataset(validation_set_name, split="validation")
 validation_set = validation_set.select(list(range(n_samples))) if n_samples else validation_set
@@ -123,7 +130,3 @@ if local_rank == 0:
     averaged_results_df = final_results_df.groupby("config", as_index=False).mean()
 
     averaged_results_df.to_csv(rf"averaged_{random.random()}{validation_set_name}{model_name}results.csv".replace("/", ""))
-
-
-
-
