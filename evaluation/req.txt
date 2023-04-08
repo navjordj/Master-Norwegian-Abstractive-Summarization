@@ -1,0 +1,6 @@
+nltk
+thefuzz
+python-Levenshtein
+pandas
+datasets
+difflib
