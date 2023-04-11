@@ -34,11 +34,11 @@ def checkup_test_pred(dataset, pred_txt_url, sensitivy=95):
                     match_sample.append(match)
             # unpack matches to string
             match_sample_str = "".join([str(x[0]) + "< SCORE : " + str(x[1])+ " > | " for x in match_sample])
-            matches.append((len(match_sample),match_sample_str ))
+            matches.append((len(pred_sentences), len(match_sample), match_sample_str))
 
     # matches is a list of lists of tuples (len, matches as string)
     # save to csv
-    matches_df = pd.DataFrame(matches, columns=["matches", "matches_sample_str"])
+    matches_df = pd.DataFrame(matches, columns=["n_sentences", "matches", "matches_sample_str"])
     if "base" in pred_txt_url:
         res_file = f"{dataset.split('/')[-1]}_base_matches.csv"
     elif "large" in pred_txt_url:
@@ -64,11 +64,11 @@ def checkup_test_article_highlights(dataset, sensitivy=95):
                     match_sample.append(match)
             # unpack matches to string
             match_sample_str = "".join([str(x[0]) + "< SCORE : " + str(x[1])+ " > | " for x in match_sample])
-            matches.append((len(match_sample),match_sample_str ))
+            matches.append((len(test_highlights_sentences),len(match_sample),match_sample_str ))
 
     # matches is a list of lists of tuples (len, matches as string)
     # save to csv
-    matches_df = pd.DataFrame(matches, columns=["matches", "matches_sample_str"])
+    matches_df = pd.DataFrame(matches, columns=["n_sentences", "matches", "matches_sample_str"])
     res_file = f"{dataset.split('/')[-1]}_highlights_matches.csv"
     matches_df.to_csv(res_file, index=False)
 
@@ -89,11 +89,11 @@ def checkup_test_article_ingress(dataset, sensitivy=95):
                     match_sample.append(match)
             # unpack matches to string
             match_sample_str = "".join([str(x[0]) + "< SCORE : " + str(x[1])+ " > | " for x in match_sample])
-            matches.append((len(match_sample),match_sample_str ))
+            matches.append((len(test_ingress_sentences), len(match_sample),match_sample_str))
 
     # matches is a list of lists of tuples (len, matches as string)
     # save to csv
-    matches_df = pd.DataFrame(matches, columns=["matches", "matches_sample_str"])
+    matches_df = pd.DataFrame(matches, columns=["n_sentences","matches", "matches_sample_str"])
     res_file = f"{dataset.split('/')[-1]}_ingress_matches.csv"
     matches_df.to_csv(res_file, index=False)
 
@@ -104,10 +104,10 @@ if __name__ == "__main__":
     #checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final", "https://huggingface.co/navjordj/t5-large-cnndaily/raw/main/generated_predictions.txt")
 
     # Local checkup with best parameters for model generation
-    checkup_test_pred("navjordj/SNL_summarization", "evaluation/results/navjordj_t5-base-snl_generated_predictions.txt")
-    checkup_test_pred("navjordj/SNL_summarization", "evaluation/results/navjordj_t5-large-snl-2_generated_predictions.txt")
-    checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final", "evaluation/results/navjordj_t5-base-cnndaily-2_generated_predictions.txt")
-    checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final", "evaluation/results/navjordj_t5-large-cnndaily_generated_predictions.txt")
+    checkup_test_pred("navjordj/SNL_summarization", "results/navjordj_t5-base-snl_generated_predictions.txt")
+    checkup_test_pred("navjordj/SNL_summarization", "results/navjordj_t5-large-snl-2_generated_predictions.txt")
+    checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final", "results/navjordj_t5-base-cnndaily-2_generated_predictions.txt")
+    checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final", "results/navjordj_t5-large-cnndaily_generated_predictions.txt")
 
     # Checking how the highlights match the article in the test set
     checkup_test_article_ingress("navjordj/SNL_summarization")
