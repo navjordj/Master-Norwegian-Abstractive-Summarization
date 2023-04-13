@@ -4,3 +4,5 @@ python-Levenshtein
 pandas
 datasets
 difflib
+sumy
+rouge
