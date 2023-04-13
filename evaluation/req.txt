@@ -3,6 +3,9 @@ thefuzz
 python-Levenshtein
 pandas
 datasets
-difflib
 sumy
 rouge
+evaluate
+numpy
+datasets
+rouge_score
