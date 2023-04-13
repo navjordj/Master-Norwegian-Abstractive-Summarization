@@ -92,7 +92,7 @@ test_configs = [
         "model_name": "navjordj/t5-large-cnndaily",
         "article_column": "article",
         "summary_column": "highlights",
-        "config_name": "beam_no_repeat_ngram_size_3",
+        "config_name": "beam_no_repeat_ngram_size_5",
         "config": {
             "eta_cutoff": 0.0,
             "repetition_penalty": 1.0,
