@@ -1,28 +1,58 @@
 Model: Top_navjordj_t5-base-snl_per_sample_score
+====== 
+ Article
 Namnet har fleire variantar: Borgar, Borger.Namnedag er 11. juni. Bjørg og Bjørge har også namnedag denne dagen. Namnestatistikk I perioden 1900–2017 var det omtrent 360 menn (fødde i Noreg) som hadde Borgar som det einaste førenamnet eller som det fyrste av fleire. Les meir i Store norske leksikon mannsnamn   førenamn, mellomnamn, etternamn   personnamn Litteratur Kruken, Kristoffer og Ola Stemshaug 2013: [Norsk personnamnleksikon]. 3. utgåva ved Kristoffer Kruken. Oslo.
-======
+====== 
+ label
+Borgar er eit mannsnamn som går tilbake til det norrøne Borg-arr. I dette toledda namnet tyder forleddet ‘berging; vern’ og etterleddet ‘krigar’.
+====== 
+ Summary
 Borgar er eit mannsnamn som går tilbake til det norrøne Borgarr.
 I dette toledda namnet tyder forleddet ‘strid’ og etterleddet’ ‘gud’.
 ===========================
+====== 
+ Article
 Brynhild er eit gammalt fellesgermansk namn.Namnedag er 16. august. Brage og Brynjulf har også namnedag denne dagen. Kulturell bruk Brynhild er ei valkyrje i «Volsungesagaen» og i diktinga om Sigurd Fåvnesbane. Namnestatistikk I perioden 1900–2017 var det omtrent 1300 kvinner (fødde i Noreg) som hadde Brynhild som det einaste førenamnet eller som det fyrste av fleire. Les meir i Store norske leksikon kvinnenamn   førenamn, mellomnamn, etternamn   personnamn Litteratur Kruken, Kristoffer og Ola Stemshaug 2013: [Norsk personnamnleksikon]. 3. utgåva ved Kristoffer Kruken. Oslo.
-======
+====== 
+ label
+Brynhild er eit kvinnenamn som går tilbake til det norrøne Bryn-hildr. I dette toledda namnet tyder forleddet ‘brynje’ og etterleddet ‘strid’.
+====== 
+ Summary
 Brynhild er eit kvinnenamn som går tilbake til det norrøne Bryn-hildr.
 I dette toledda namnet tyder forleddet ‘gud’.
 ===========================
+====== 
+ Article
 Les om måneden juni.18. juni er nasjonaldag i Seychellene.Bjarne og Bjørn har navnedag.Noen kjente personer med fødselsdag 18. juni er Feofan Prokopovitsj (1681), Miklós Horthy (1868), Anastasia (1901), Otto Grieg Tidemand (1921), Kjell (Arve) Lund (1927), Reidar Thomassen (1936), Ailo Gaup (1944), Torstein Bugge Høverstad (1944) og Bent Stiansen (1963).18. juni 1928 døde Roald Amundsen.Noen andre historiske begivenheter som har foregått 18. juni:1815: Napoleon 1 blir slått i slaget ved Waterloo. Se Frankrike — Historie.1821: Carl Maria von Webers opera Jegerbruden blir uroppført i Berlin.1940: Charles de Gaulle tar ledelsen over de franske styrkene som fortsetter kampen etter at Pétain har kapitulert. Se også Frankrike — Historie.1971: Norsk språkråd blir opprettet.
-======
+====== 
+ label
+Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.
+====== 
+ Summary
 Dette er en datoartikkel.
 Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
 Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.
 ===========================
+====== 
+ Article
 Les om måneden november.11. november er festdag for helgenen Martin av Tours, og kalles i Norge for Mortensmesse.Til minne om våpenstillstanden etter 1. verdenskrig markeres dagen i Storbritannia som Armistice Day og i USA som Veterans' Day.11. november er nasjonaldagen i Angola.Martin, Martine og Morten har navnedag.11. november er fødselsdagen til følgende kjente personer: Fjodor Dostojevskij (1821), Kurt Vonnegut (1922), Carlos Fuentes (1928), Bibi Andersson (1935) og Leonardo DiCaprio (1974).11. november 1918 ble det sluttet våpenstillstand etter den første verdenskrig.11. november 1975 ble Angola selvstendig.
-======
+====== 
+ label
+Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.
+====== 
+ Summary
 Dette er en datoartikkel.
 Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
 Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.
 ===========================
+====== 
+ Article
 Les om måneden januar.18. januar er navnedag for Hild og Hildur.Noen kjente personer med fødselsdag 18. januar er A. A. Milne (1882), Cary Grant (1904), Antonio Bibalo (1922), Alexander Brenning (eg. Tor Sæther, 1944), Kjersti Ericsson (1944) og Erik Solheim (1955).Noen historiske begivenheter som har foregått 18. januar:1871: Kong Vilhelm av Preussen blir utropt til tysk keiser (se Tyskland – Historie).1919: Fredskonferansen om Tyskland i Versailles åpnes (se den første verdenskrig).1945: Pest blir inntatt av den røde armé (se Budapest).
-======
+====== 
+ label
+Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.
+====== 
+ Summary
 Dette er en datoartikkel.
 Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
 Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.

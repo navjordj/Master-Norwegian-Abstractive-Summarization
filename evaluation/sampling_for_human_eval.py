@@ -14,13 +14,15 @@ def print_to_file(print_str, file):
     print(print_str, file=file)
 
 
-def print_article_summary(name, articles, summaries):
+def print_article_summary(name, articles, summaries, labels):
     with open(f"{name}_human_eval.txt", "w", encoding="utf-8") as f:
         print_to_file(f"Model: {name}", f)
-        for article, summary in zip(articles, summaries):
-
+        for article, summary, label in zip(articles, summaries, labels):
+            print_to_file("====== \n Article", f)
             print_to_file(article, f)
-            print_to_file("======", f)
+            print_to_file("====== \n label", f)
+            print_to_file(label, f)
+            print_to_file("====== \n Summary", f)
             print_to_file(summary, f)
             print_to_file("===========================", f)
 
@@ -42,9 +44,10 @@ large_cnn_random_indices = large_cnn.sample(
     sample_per_model, replace=False, random_state=seed).index
 
 
-def process_csv(csv_file, article):
+def process_csv(csv_file, article, labels):
     df = pd.read_csv(csv_file)
     df = df.join(article)
+    df = df.join(labels)
     # print(csv_file)
     # df["HMean"] = df[["rouge1", "rouge2", "rougeL"]].mean(axis=1)
     df = df.reset_index()
@@ -67,29 +70,38 @@ def process_csv(csv_file, article):
     print_article_summary(
         f"Random_{csv_file.split('/')[1].rstrip('.csv')}",
         random_n["article"].values,
-        random_n["summary"].values
+        random_n["summary"].values,
+        random_n["labels"].values
     )
     print_article_summary(
         f"Top_{csv_file.split('/')[1].rstrip('.csv')}",
         top_n["article"].values,
-        top_n["summary"].values
+        top_n["summary"].values,
+        top_n["labels"].values
     )
 
     print_article_summary(
         f"Bottom_{csv_file.split('/')[1].rstrip('.csv')}",
         bottom_n["article"].values,
-        bottom_n["summary"].values
+        bottom_n["summary"].values,
+        bottom_n["labels"].values
     )
 
 
 if __name__ == "__main__":
     for csv_file in csv_files:
         if "cnndaily" in csv_file:
-            article = load_dataset(
-                "jkorsvik/cnn_daily_mail_nor_final", split="test").to_pandas()["article"]
+            df = load_dataset(
+                "jkorsvik/cnn_daily_mail_nor_final",
+                split="test"
+            ).to_pandas().rename(columns={"highlights": "labels"})
         elif "snl" in csv_file:
-            article = load_dataset("navjordj/SNL_summarization",
-                                   split="test").to_pandas()["article"]
-        process_csv(csv_file, article)
+            df = load_dataset(
+                "navjordj/SNL_summarization",
+                split="test"
+            ).to_pandas().rename(columns={"ingress": "labels"})
+        labels = df[["labels"]]
+        article = df[["article"]]
+        process_csv(csv_file, article, labels)
 
 # Path: evaluation\human_eval.py
