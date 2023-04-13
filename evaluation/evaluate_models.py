@@ -17,16 +17,19 @@ from transformers import (
 from datasets import load_dataset
 import numpy as np
 
+import warnings
+
 import os
 
 N_SAMPLES = None
-BATCH_SIZE = 8
+BATCH_SIZE = 16
 PREFIX = "oppsummer: "
+
 
 test_configs = [
     {
         "dataset": "navjordj/SNL_summarization",
-        "model": "navjordj/t5-base-snl",
+        "model_name": "navjordj/t5-base-snl",
         "article_column": "article",
         "summary_column": "ingress",
         "config_name": "beam_no_repeat_ngram_size_3",
@@ -46,7 +49,7 @@ test_configs = [
     },
     {
         "dataset": "navjordj/SNL_summarization",
-        "model": "navjordj/t5-large-snl-2",
+        "model_name": "navjordj/t5-large-snl-2",
         "article_column": "article",
         "summary_column": "ingress",
         "config_name": "beam_no_repeat_ngram_size_3",
@@ -66,7 +69,7 @@ test_configs = [
     },
     {
         "dataset": "jkorsvik/cnn_daily_mail_nor_final",
-        "model": "navjordj/t5-base-cnndaily-2",
+        "model_name": "navjordj/t5-base-cnndaily-2",
         "article_column": "article",
         "summary_column": "highlights",
         "config_name": "beam_no_repeat_ngram_size_3",
@@ -86,7 +89,7 @@ test_configs = [
     },
     {
         "dataset": "jkorsvik/cnn_daily_mail_nor_final",
-        "model": "navjordj/t5-large-cnndaily",
+        "model_name": "navjordj/t5-large-cnndaily",
         "article_column": "article",
         "summary_column": "highlights",
         "config_name": "beam_no_repeat_ngram_size_3",
@@ -107,9 +110,14 @@ test_configs = [
 ]
 
 
-def evaluate_model(dataset, model, article_column, summary_column, config_name, config):
-    tokenizer = AutoTokenizer.from_pretrained(model)
-    model = T5ForConditionalGeneration.from_pretrained(model)
+def evaluate_model(dataset, model_name, article_column, summary_column, config_name, config):
+    print("Evaluating model: ", model_name)
+
+
+
+
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = T5ForConditionalGeneration.from_pretrained(model_name)
 
     test_set = load_dataset(dataset, split="test")
     test_set = test_set.select(list(range(N_SAMPLES))) if N_SAMPLES else test_set
@@ -127,7 +135,6 @@ def evaluate_model(dataset, model, article_column, summary_column, config_name, 
         inputs = [PREFIX + inp for inp in inputs]
         model_inputs = tokenizer(inputs, max_length=512, padding=False, truncation=True)
 
-        # Tokenize targets with the `text_target` keyword argument
         labels = tokenizer(
             text_target=targets, max_length=512, padding=False, truncation=True
         )
@@ -165,6 +172,16 @@ def evaluate_model(dataset, model, article_column, summary_column, config_name, 
     metric = evaluate.load("rouge")
 
     def compute_metrics(eval_preds):
+
+        per_sample_scores = pd.DataFrame(columns = [
+            "summary",
+            "correct",
+            "rouge1",
+            "rouge2",
+            "rougeL",
+            "rougeLsum",
+        ])
+
         preds, labels = eval_preds
         if isinstance(preds, tuple):
             preds = preds[0]
@@ -179,14 +196,36 @@ def evaluate_model(dataset, model, article_column, summary_column, config_name, 
         # Some simple post-processing
         decoded_preds, decoded_labels = postprocess_text(decoded_preds, decoded_labels)
 
+        # Calculate ROUGE scores for each sample
+        with warnings.catch_warnings():
+            warnings.simplefilter(action='ignore', category=FutureWarning)
+
+            for pred, label in zip(decoded_preds, decoded_labels):
+                result = metric.compute(
+                    predictions=[pred], references=[label], use_stemmer=True
+                )
+                result = {k: round(v * 100, 4) for k, v in result.items()}
+
+
+                per_sample_scores = per_sample_scores.append({"summary": pred.strip(), "correct": label.strip(), **result}, ignore_index=True)
+
+        per_sample_scores.to_csv(f"{model_name}_per_sample_scores.csv".replace("/", "_"))
+
+        # Calculate ROUGE scores for the whole dataset
         result = metric.compute(
             predictions=decoded_preds, references=decoded_labels, use_stemmer=True
         )
+
         result = {k: round(v * 100, 4) for k, v in result.items()}
         prediction_lens = [
             np.count_nonzero(pred != tokenizer.pad_token_id) for pred in preds
         ]
         result["gen_len"] = np.mean(prediction_lens)
+
+
+        #Skrive prediksjoner og scorer til fil
+        #decoded preds er BATCH SIZEx150
+        
         return result
 
     args = Seq2SeqTrainingArguments(
@@ -204,14 +243,25 @@ def evaluate_model(dataset, model, article_column, summary_column, config_name, 
         compute_metrics=compute_metrics,
     )
 
+      
     predict_results = trainer.predict(test_set, metric_key_prefix="test", **config)
+    """
+    predictions = tokenizer.batch_decode(
+        predict_results.predictions, skip_special_tokens=True, clean_up_tokenization_spaces=True
+    )
+    predictions = [pred.strip() for pred in predictions]
+    output_prediction_file = f"{model_name}_generated_predictions.txt".replace("/", "_")
+    with open(output_prediction_file, "w") as writer:
+        writer.write("\n".join(predictions))
+    """
+
     return predict_results.metrics
 
 
 def main():
     results_df = pd.DataFrame(
         columns=[
-            "name",
+            "model",
             "config",
             "test_loss",
             "test_rouge1",
@@ -226,10 +276,10 @@ def main():
     )
 
     for test_config in test_configs:
+
+
         results = evaluate_model(**test_config)
-        results_df = results_df.append({"name": test_config["config_name"], "config": test_config["config"], **results}, ignore_index=True)
-
-
+        results_df = results_df.append({"model": test_config["model_name"], "config_name": test_config["config_name"], "config": test_config["config"], **results}, ignore_index=True)
     # Convert the DataFrame to a string
     results_df.to_csv("results.csv")
 
