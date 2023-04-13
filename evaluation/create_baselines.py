@@ -71,7 +71,7 @@ if __name__ == "__main__":
     dataset_set = ["navjordj/SNL_summarization",
                    "jkorsvik/cnn_daily_mail_nor_final"]
     resultsdf = pd.DataFrame(
-        columns=['dataset', 'model', 'rouge1', 'rouge2', 'rougeL', 'gen_len_words'])
+        columns=['dataset', 'model', 'rouge1', 'rouge2', 'rougeL', 'rougeLsum' 'gen_len_words'])
 
     df = main(dataset_set[0])
     lead3scores = rouge_scores(df['Lead_3_summary'], df['ingress'])
@@ -95,4 +95,4 @@ if __name__ == "__main__":
     textrankscores['model'] = 'TextRank_3'
     resultsdf = resultsdf._append(textrankscores, ignore_index=True)
 
-    resultsdf.to_csv('results.csv', index=False)
+    resultsdf.to_csv('baseline_results.csv', index=False)
