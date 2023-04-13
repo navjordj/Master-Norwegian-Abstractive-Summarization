@@ -1,0 +1,5 @@
+dataset,model,rouge1,rouge2,rougeL,gen_len_words,rougeLsum
+navjordj/SNL_summarization,Lead_3,21.2521,3.1618,13.6057,69.7023076923077,13.6066
+navjordj/SNL_summarization,TextRank_3,20.1568,3.1445,12.36,107.90076923076923,12.3515
+jkorsvik/cnn_daily_mail_nor_final,Lead_3,29.8188,10.8378,18.8391,72.60574875798439,18.8335
+jkorsvik/cnn_daily_mail_nor_final,TextRank_3,23.7842,6.4595,14.4648,130.56352022711144,14.4727
