@@ -15,19 +15,17 @@ nltk.download('punkt')
 
 
 def textrank_summary(text, num_sentences=3):
-    parser = PlaintextParser.from_string(text, Tokenizer("english"))
+    parser = PlaintextParser.from_string(text, Tokenizer("norwegian"))
     summarizer = TextRankSummarizer()
     sentences = summarizer(parser.document, num_sentences)
     return " ".join([str(sentence) for sentence in sentences])
 
 
-# Function to calculate Rouge scores
+# Function to summarize the text using Lead-3
 
-
-def calculate_rouge_scores(summary, reference):
-    rouge = Rouge()
-    scores = rouge.get_scores(summary, reference, avg=True)
-    return scores['rouge-1'], scores['rouge-2'], scores['rouge-l']
+def lead_3_summary(text):
+    sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', text)
+    return " ".join(sentences[:3])
 
 
 metric = evaluate.load("rouge")
@@ -44,26 +42,57 @@ def rouge_scores(preds, labels, tokenizer=word_tokenize):
     return result
 
 
-# Function to summarize the text using Lead-3
-
-def lead_3_summary(text):
-    sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', text)
-    return " ".join(sentences[:3])
-
-
 def main(dataset_path):
     # Load the dataset
     dataset = load_dataset(dataset_path, split="test")
     # Create a DataFrame
-    df = pd.DataFrame(dataset)
-    # Apply TextRank to the DataFrame
-    df['TextRank_Summary'] = df['Article'].apply(textrank_summary)
-    # Apply Lead-3 to the DataFrame
-    df['Lead_3_Summary'] = df['Article'].apply(lead_3_summary)
+    df = dataset.to_pandas()
 
-    # Display the DataFrame with Lead-3 summaries
-    print(df)
+    # Apply Lead-3 to the DataFrame
+    df['Lead_3_summary'] = df['article'].apply(lead_3_summary)
+    # write the results to a txt file where each line is a summary
+    with open(f"{dataset_path.split('/')[-1]}_Lead_3_summary.txt", "w", encoding="utf-8") as f:
+        for summary in df['Lead_3_summary']:
+            f.write(summary + " ")
+            f.write("\n")
+
+    # Apply TextRank to the DataFrame
+    df['TextRank_summary'] = df['article'].apply(textrank_summary)
+    # write the results to a txt file where each line is a summary
+    with open(f"{dataset_path.split('/')[-1]}_TextRank_summary.txt", "w", encoding="utf-8") as f:
+        for summary in df['TextRank_summary']:
+            f.write(summary + " ")
+            f.write("\n")
+
+    return df
 
 
 if __name__ == "__main__":
-    main("navjordj/SNL_summarization")
+    dataset_set = ["navjordj/SNL_summarization",
+                   "jkorsvik/cnn_daily_mail_nor_final"]
+    resultsdf = pd.DataFrame(
+        columns=['dataset', 'model', 'rouge1', 'rouge2', 'rougeL', 'gen_len_words'])
+
+    df = main(dataset_set[0])
+    lead3scores = rouge_scores(df['Lead_3_summary'], df['ingress'])
+    lead3scores['dataset'] = dataset_set[0]
+    lead3scores['model'] = 'Lead_3'
+    resultsdf = resultsdf._append(lead3scores, ignore_index=True)
+
+    textrankscores = rouge_scores(df['TextRank_summary'], df['ingress'])
+    textrankscores['dataset'] = dataset_set[0]
+    textrankscores['model'] = 'TextRank_3'
+    resultsdf = resultsdf._append(textrankscores, ignore_index=True)
+
+    df = main(dataset_set[1])
+    lead3scores = rouge_scores(df['Lead_3_summary'], df['highlights'])
+    lead3scores['dataset'] = dataset_set[1]
+    lead3scores['model'] = 'Lead_3'
+    resultsdf = resultsdf._append(lead3scores, ignore_index=True)
+
+    textrankscores = rouge_scores(df['TextRank_summary'], df['highlights'])
+    textrankscores['dataset'] = dataset_set[1]
+    textrankscores['model'] = 'TextRank_3'
+    resultsdf = resultsdf._append(textrankscores, ignore_index=True)
+
+    resultsdf.to_csv('results.csv', index=False)
