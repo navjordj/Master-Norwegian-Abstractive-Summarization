@@ -1,5 +1,6 @@
 git+https://github.com/huggingface/transformers
 git+https://github.com/huggingface/accelerate
+git+https://github.com/huggingface/peft
 deepspeed
 datasets
 sentencepiece
@@ -14,4 +15,4 @@ rouge-score
 py7zr
 evaluate
 wandb
-torch
+evaluate[evaluator]
