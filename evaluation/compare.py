@@ -170,15 +170,16 @@ if __name__ == "__main__":
     # checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final", "https://huggingface.co/navjordj/t5-large-cnndaily/raw/main/generated_predictions.txt")
     splits = ["validation", "train", "test"]
     for split in splits:
-        # Local checkup with best parameters for model generation
-        checkup_test_pred("navjordj/SNL_summarization",
-                          "results/navjordj_t5-base-snl_generated_predictions.txt", split=split)
-        checkup_test_pred("navjordj/SNL_summarization",
-                          "results/navjordj_t5-large-snl-2_generated_predictions.txt", split=split)
-        checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final",
-                          "results/navjordj_t5-base-cnndaily-2_generated_predictions.txt", split=split)
-        checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final",
-                          "results/navjordj_t5-large-cnndaily_generated_predictions.txt", split=split)
+        if split == "test":
+            # Local checkup with best parameters for model generation
+            checkup_test_pred("navjordj/SNL_summarization",
+                              "results/navjordj_t5-base-snl_generated_predictions.txt", split=split)
+            checkup_test_pred("navjordj/SNL_summarization",
+                              "results/navjordj_t5-large-snl-2_generated_predictions.txt", split=split)
+            checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final",
+                              "results/navjordj_t5-base-cnndaily-2_generated_predictions.txt", split=split)
+            checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final",
+                              "results/navjordj_t5-large-cnndaily_generated_predictions.txt", split=split)
 
         # Checking how the highlights match the article in the test set
         checkup_test_article_ingress(
