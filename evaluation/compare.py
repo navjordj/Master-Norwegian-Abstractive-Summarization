@@ -168,7 +168,7 @@ if __name__ == "__main__":
     # Online chekuo
     # checkup_test_pred("navjordj/SNL_summarization", "https://huggingface.co/navjordj/t5-large-snl-2/raw/main/generated_predictions.txt")
     # checkup_test_pred("jkorsvik/cnn_daily_mail_nor_final", "https://huggingface.co/navjordj/t5-large-cnndaily/raw/main/generated_predictions.txt")
-    splits = ["test"]
+    splits = ["validation", "train", "test"]
     for split in splits:
         # Local checkup with best parameters for model generation
         checkup_test_pred("navjordj/SNL_summarization",
