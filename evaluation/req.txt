@@ -9,3 +9,4 @@ evaluate
 numpy
 datasets
 rouge_score
+spacy
