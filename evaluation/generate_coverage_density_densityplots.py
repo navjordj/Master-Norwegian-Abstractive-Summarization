@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import os
 import numpy as np
+import textwrap
 
 
 def main(
@@ -90,7 +91,7 @@ def main(
         if "ingress" in descriptive_name:
             plot_name += " ingress-article"
         if "pred" in descriptive_name:
-            plot_name += " predicted"
+            plot_name += " predicted-article"
         if "test" in descriptive_name:
             plot_name += " test"
         if "base" in descriptive_name:
@@ -128,13 +129,16 @@ def main(
         name_plot = name_plot.replace("densityplot_", "")
     # Set the title for the figure
     fig_title = f'Normalized Bivariate Density Plots for Coverage and Density {" ".join(x[0].upper() + x[1:] for x in name_plot.split("_"))}'
+    fig_title = fig_title.replace("Cnn", "CNN Daily Mail")
+    fig_title = fig_title.replace("Snl", "SNL")
+    wrapped_title = textwrap.fill(fig_title, width=60)
     fig.suptitle(fig_title, fontsize=16)
 
     # Optimize the layout and display the figure
     plt.tight_layout(rect=[0, 0, 1, 0.95])
 
     # Save the figure as a high-resolution PNG file
-    plt.savefig(f'{name_plot}.png', dpi=300)
+    plt.savefig(f'plots/{name_plot}.png', dpi=300)
 
     plt.show()
 
@@ -173,7 +177,7 @@ if __name__ == '__main__':
 
     main(
         filepaths=filepaths_test_pred_snl,
-        name_plot="densityplot_pred_test_snl",
+        name_plot="densityplot_test_pred_snl",
         density_upper_lim=18,
         legend_location='lower right',
         n_cols=1,
@@ -181,7 +185,7 @@ if __name__ == '__main__':
 
     main(
         filepaths=filepaths_test_pred_cnn,
-        name_plot="densityplot_pred_test_cnn",
+        name_plot="densityplot_test_pred_cnn",
         density_upper_lim=80,
         legend_location='lower right',
         coverage_lower_lim=0.2,
