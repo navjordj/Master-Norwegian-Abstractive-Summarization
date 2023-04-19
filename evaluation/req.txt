@@ -10,3 +10,5 @@ numpy
 datasets
 rouge_score
 spacy
+seaborn
+textwrap
