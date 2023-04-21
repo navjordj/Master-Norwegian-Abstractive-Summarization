@@ -1,0 +1,62 @@
+ArticleNr,Informativeness,,Relevance,,Fluency,,Coherence,,Factuality,,Label,Summary,
+Aftenposten,Kors,Nav,Kors,Nav,Kors,Nav,Kors,Nav,Kors,Nav,,,Copy me to a new sheet for each model
+1,2,2,2,2,5,5,,,1,1,En mann i 40-årene er siktet for drapsforsøk på Sunnaas sykehus. Ifølge VG var det natt til onsdag at en kvinne ble alvorlig skadet da hun besøkte mannen.,Sunnaas sykehus er et sykehus i Oslo som er siktet for drapsforsøk etter en voldshendelse natt til onsdag.,Duplicate 
+2,3,2,4,4,5,5,4,4,5,5,"Prisene opp 6,5 prosent det siste året. Årsaken til den økte veksttakten er først og fremst at prisene på strøm steg mer fra februar til mars i år sammenlignet med i fjor. Dette trekker prisendringen opp.","SSBs konsumprisindeks (KPI) steg igjen i mars i år fra samme tid i fjor, og viser at inflasjonen fortsatt ligger over målet på to prosent. Norges Bank har varslet at rentetoppen vil ligge rundt 3,5 prosent i september.",If you want to you can add the summary 
+Wikipedia,,,,,,,,,,,,,Newsroom method: https://aclanthology.org/N18-1065/
+3,3,4,5,5,5,5,,,5,5,,Levenshtein-distanse er et mål for antall operasjoner som trengs for å endre en streng til en annen,
+4,4,5,5,5,5,5,5,5,5,5,,"Telefonkiosk er en bygning eller et lite avlukke med dør som inneholder en fastmontert telefon. Telefonapparatet er en del av en betalingsautomat og samtalene betales med mynter, telekort eller betalingskort.",
+Kvinneguiden,,,,,,,,,,,,,
+5,1,2,1,1,2,2,3,5,1,1,,"Det er vanskelig å si noe om hvordan jeg har det i livet mitt. Jeg har vært i et forhold siden jeg var ganske liten, og har opplevd at jeg har blitt usynlig i mitt eget liv. Nå føler jeg meg svelget den siste kamelen, og føler meg i mer psykisk mishandling enn jeg noensinne har gjort.",
+Komplett.no,,,,,,,,,,,,,
+6,4,5,5,5,5,5,5,5,5,5,,Et skjerm- og grafikkort er en komponent i en datamaskin som brukes til å vise levende bilder og filmer. Dette er den delen av maskinen som gjør de tyngste løftene. Det er skjermkortet som avgjør hvor fort maskinen klarer å oppdatere skjermen når det gjelder oppløsning og bildehastighet.,
+SNL Bottom 5,,,,,,,,,,,,,
+7,2,3,3,3,5,5,5,5,2,2,"Alliance Internationale de Tourisme, verdensomfattende reiselivsorganisasjon med hovedkontor i Genève.","ACI er en internasjonal organisasjon for reiselivs- og motororganisasjoner.
+Organisasjonen ble grunnlagt i 1898.",
+8,4,5,5,5,5,5,4,5,5,5,Brakteater var mynter med preg bare på den ene siden. Blanketten på brakteaterne var så tynn at adversens opphøyde preg vises negativt på reversen.,"Brakteater er en middelaldermynt som er preget med en liten billedflate til rådighet.
+Myntene er ofte enkle og enkle i utformingen, men har ofte et enkelt motiv på mynten.
+De norske brakteatmyntene ble preget i Norge fra begynnelsen av 1100-tallet til slutten av 1300-tallet.",
+9,1,2,5,5,5,5,3,3,5,5,"I likhet med de fleste andre latinamerikanske land har Colombia siden 1989 liberalisert sin økonomiske politikk gjennom frihandelsavtaler med nabolandene, ved å legge forholdene til rette for utenlandsk kapital og ved en mer og mer markedsorientert indre politikk. Ekspanderende oljeutvinning og en viss diversifisering av næringslivet har til en viss grad begrenset de sosiale omkostningene med denne økonomiske politikken.","Colombia er verdens nest største kaffeprodusent, etter Brasil.
+Bruttonasjonalproduktet (BNP) vokste i perioden 1994–2002 med 1,6 % i faste priser.",
+10,2,2,5,5,5,5,,,5,5,"Dansk kunsthistorie regnes fra steinalderens rissebilder og dekorerte keramikk til vår tids internasjonale samtidskunst. Til dansk kunsthistorie hører også kunst på Grønland, ettersom Grønland er del av Danmark.","Danmark har hatt en rik kulturhistorie i eldre steinalder, bronsealder, jernalder og romertid.",
+11,4,4,3,2,5,5,,,4,3,Chicagoskolen er den sosiologiske forskningsvirksomheten som foregikk ved University of Chicago mellom første og andre verdenskrig.,"«Skolen» var en retning innen sosiologien som ble utviklet i USA i 1930-årene, blant annet gjennom William I. Thomas og Florian Znaniecki.",
+SNL Top 5,,,,,,,,,,,,,
+12,2,2,2,2,5,5,5,5,5,5,Borgar er eit mannsnamn som går tilbake til det norrøne Borg-arr. I dette toledda namnet tyder forleddet ‘berging; vern’ og etterleddet ‘krigar’.,"Borgar er eit mannsnamn som går tilbake til det norrøne Borg-r.
+I dette toledda namnet tyder forleddet ‘berging’ og etterleddet’ krigar’.",
+13,2,2,2,2,5,5,5,5,3,4,Brynhild er eit kvinnenamn som går tilbake til det norrøne Bryn-hildr. I dette toledda namnet tyder forleddet ‘brynje’ og etterleddet ‘strid’.,"Brynhild er eit kvinnenamn som går tilbake til det norrøne Bryn-hildr.
+I dette toledda namnet tyder forleddet ‘strid’ og etterleddet’strid’.",
+14,1,1,1,1,5,5,5,5,1,1,"Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.","Dette er en datoartikkel.
+Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
+Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.",
+15,1,1,1,1,5,5,5,5,1,1,"Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.","Dette er en datoartikkel.
+Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
+Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.",
+16,1,1,1,1,5,5,5,5,1,1,"Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.","Dette er en datoartikkel.
+Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
+Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.",
+SNL Random 5,,,,,,,,,,,,,
+17,3,2,3,2,4,4,5,5,2,1,"Frank Bridge var en britisk komponist og bratsjist som regnes som en av sin tids viktigste musikere. Han var Benjamin Brittens viktigste lærer, og Britten hyllet ham i 1937 med verket Variations on a Theme of Frank Bridge for strykeorkester, et verk som for øvrig for alvor bragte Brittens navn frem i lyset.","William Bridge var en britisk komponist, fiolinist og dirigent.
+Han regnes som en av de betydeligste britiske strykekvartettene på 1900-tallet.",
+18,4,4,4,4,5,5,5,5,2,3,Bakke kloster er et tidligere nonnekloster i Trondheim. Det lå på østsiden av Nidelva litt ovenfor dennes utløp i Trondheimsfjorden.,"Bakke kloster var et benediktinerkloster på Bakklandet i Asker kommune, Viken fylke.
+Klosteret ble grunnlagt i 1100.",
+19,4,4,5,5,4,4,5,5,5,5,"Årevinger er en stor gruppe insekter med mer enn 4000 arter bare i Norge. Den omfatter velkjente insekter som maur, stikkeveps og humler, og husdyret honningbie.","Årevinger er en orden av insekter i ordenen veps.
+De omfatter bier, humler, stilkveps, broddvepser og snyltevepser.",
+20,2,2,2,2,5,5,,,2,2,"Durativ, aksjonsart som betegner varighet. Om en kategori, typisk et verb, som beskriver en handling som foregår over tid.","Durativ er en aksjonsart som brukes om en handling som varer lenge, for eksempel banke på døra.",
+21,4,4,5,5,5,5,,,5,5,"Borgerlig begravelse er en tradisjonell betegnelse på gravferd som foregår uten medvirkning av et religiøst trossamfunn. Før 1. januar 1970 var borgerlig begravelse forbeholdt personer som ikke var medlem av Den norske kirke, men i dag har alle adgang til å nytte en slik seremoniform.",Borgerlig begravelse er en ikke-religiøs gravferdsseremoni for personer som ikke er medlem av kirken eller den danske folkekirken.,
+CNN Dailymail Bottom 5,,,,,,,,,,,,,
+22,,,,,,,,,,,Amnesty International kaller arrestasjoner forfølgelse. Dusinvis protesterer i byen. Demonstranter er blitt opprørt over det rettslige system. Saudiske offisielle gjør referanse til avvikende grupper,,
+23,,,,,,,,,,,"Sent på regnfulle, ensomme netter er noen fristet til å google en gammel kjærlighet. En historie om en soldat og tenåring hadde en lykkelig Facebook-slutt. Inspirert forfatter søker etter og møter sin gamle kjærlighet. Men han er eldre, mer moden, versjon av den fæle fyren som knuste hjertet hennes.",,
+24,,,,,,,,,,,"Rick Steves skriver europeiske reiseguidebøker og vertskap for reiseshow. Hans TV-serie, Rick Steves' Europa, - om PBS-stasjoner. Steves selskap, Europe Through the Back Door, gjennomfører Europa-turneer.",,
+25,,,,,,,,,,,#TwizzlerChallenge er inspirert av Lady and the Tramp Fjorårets Ice Bucket Challenge innbrakte 115 millioner dollar.,,
+26,,,,,,,,,,,"Nyt havnesmakingen i den portugisiske byen som gjorde drinken berømt. Såk i islandske varme kilder uten å være omgitt av andre turister. Tilbake til Italias Cinque Terre-byer, tilbake til sine maleriske tidligere jeg. Følg ČGame of Thrones sti til Nord-Irland og Dubrovnik, Kroatia.",,
+CNN Dailymail Top 5,,,,,,,,,,,,,
+27,,,,,,,,,,,Denne siden inkluderer serien Transcript. Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd. Nederst på siden kommenterer man for en sjanse til å bli nevnt på CNN Student News. Du må være lærer eller elev i alderen 13 år eller eldre for å be om en omtale på CNN Student News Roll Call.,,
+28,,,,,,,,,,,Daglig transkripsjon er en skriftlig versjon av hver dags CNN Student News-program. Bruk denne utskriften til å hjelpe elever med å forstå og forstå ordforrådet. Bruk ukeavisen til å teste din kunnskap om historier du så på CNN Student News.,,
+29,,,,,,,,,,,Denne siden inkluderer serien Transcript. Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd. Nederst på siden kommenterer man for en sjanse til å bli nevnt på CNN Student News. Du må være lærer eller elev i alderen 13 år eller eldre for å be om en omtale på CNN Student News Roll Call.,,
+30,,,,,,,,,,,"Denne siden inkluderer serien Transcript, Daily Curriculum og Maps. Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd. Dagsavisens Curriculum tilbyr Medielitteratur Dagens spørsmål, nøkkelkonsepter, raske fakta og diskusjonsspørsmål. Nederst på siden kan du dele din tilbakemelding om serien og pensumet vårt.",,
+31,,,,,,,,,,,Daglig transkripsjon er en skriftlig versjon av hver dags CNN Student News-program. Bruk denne utskriften til å hjelpe elever med å forstå og forstå ordforrådet. Bruk ukeavisen til å teste din kunnskap om historier du så på CNN Student News.,,
+CNN Dailymail Random 5,,,,,,,,,,,,,
+32,,,,,,,,,,,"West Midland Police sa at mannen er fra Hodge Hill i Birmingham. Han ble arrestert kl. 7 på grunn av mistanke om terrorlovbrudd, sier politiet. Det kommer etter at tre britiske tenåringsjihadister ble arrestert i Tyrkia. Sikkerhetsoperasjonen stoppet dem i å slutte seg til islamistiske statsforkjempere i Syria.",,
+33,,,,,,,,,,,"Bahamas vinner 4x400m stafett, og slår Team USA til gull. USA's kvinner slår 27 år gammel verdensrekord i 4x100m-finalen. Frankrikes Renaud Lavillenie tar gull i stavsprangfinalen for menn med olympisk rekord på 5,97m.",,
+34,,,,,,,,,,,Engelsk sementerer sin posisjon som forretningsspråk. Et annet språk vil imidlertid bidra til å fremme din karriere. Det lønner seg sannsynligvis å sette karrieren på vent for å lære et språk i det lange løp.,,
+35,,,,,,,,,,,"Coca-Cola ble oppfunnet i Atlanta, Georgia i 1886 av en amerikansk farmasøyt. I dag er det verdens største drikkevareselskap. Selskapet har virksomhet i over 200 land, sysselsetter 55 000 personer.",,
+36,,,,,,,,,,,"Tolv ISAF-medlemmer døde i krasjet, sier ISAF. Helikopteret styrtet i det østlige Kabul, sier en politisjef. De drepte er identifisert som tyrkiske borgere. Det er ingen rapporter om sivile tap, sier politisjefen.",,

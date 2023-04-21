@@ -1,0 +1,78 @@
+ArticleNr,Informativeness,,Relevance,,Fluency,,Coherence,,Factuality,,Label,Summary,
+Aftenposten,Kors,Nav,Kors,Nav,Kors,Nav,Kors,Nav,Kors,Nav,,,Copy me to a new sheet for each model
+1,4,4,5,5,5,5,4,4,5,5,En mann i 40-årene er siktet for drapsforsøk på Sunnaas sykehus. Ifølge VG var det natt til onsdag at en kvinne ble alvorlig skadet da hun besøkte mannen.,"En kvinne i 40-årene ble alvorlig skadet, men er utenfor livsfare, skriver politiet. Kvinnen var på besøk hos siktede, som var innlagt på sykehuset. Politiet har også beslaglagt et våpen de mener ble brukt. Det er foreløpig uklart hva som foranlediget hendelsen.",Duplicate 
+2,3,3,5,5,5,5,5,5,5,5,"Prisene opp 6,5 prosent det siste året. Årsaken til den økte veksttakten er først og fremst at prisene på strøm steg mer fra februar til mars i år sammenlignet med i fjor. Dette trekker prisendringen opp.","Det er fortsatt mange ulike vare- og tjenestegrupper som bidrar betydelig til at prisveksten er høy. I tillegg til matvarer og alkoholfrie drikkevarer er også prisene på biler, strøm, husleie og restauranttjenester med på å holde veksten oppe. Priskrig på typiske påskevarer som sjokolade, egg, lammekjøtt og appelsiner trakk ned i mars.",If you want to you can add the summary 
+Wikipedia,,,,,,,,,,,,,Newsroom method: https://aclanthology.org/N18-1065/
+3,5,5,5,5,5,5,5,5,5,5,,"Levenshtein-distansen mellom to strenger refererer til det minste antallet operasjoner som trengs for å endre den ene strengen til en annen. Den brukes i retteprogram, men også i bioinformatikk.",
+4,4,3,5,5,5,5,4,4,5,5,,"Telefonkiosker ble vanlige i den industrialiserte delen av verden på 1910-tallet. En av de første standardiserte telefonkioskene var British Posts velkjente, røde «K1» fra 1920 og oppfølgeren «K2» fra 1930. Behovet for telefonkiosker oppstod i en tid da det var dyrt og vanskelig å skaffe seg sin egen telefon og da det ikke fantes mobiltelefoner.",
+Kvinneguiden,,,,,,,,,,,,,
+5,3,3,4,4,5,5,5,5,4,4,,"Mor til to har vært vanskelig å ha med å gjøre hele tiden, selv om jeg ikke hadde noe med bruddet å si. Hun har løyet om meg til barna, og hun har sagt at jeg ikke var usynlig. Jeg har bestemt meg, så trenger ingen råd, men er det så vanvittig av meg å sette foten ned og ikke finner meg i mer psykisk mishandling? Far er rasende på meg, og jeg føler at jeg har svelget den siste kamelen",
+Komplett.no,,,,,,,,,,,,,
+6,5,5,5,5,5,5,5,5,5,5,,"En datamaskin er helt og holdent avhengig av flere deler i kroppen som spiller på lag. Grafikkjobben derimot, det å vise levende bilder og filmer, er skjerm- og grafikkortets domene. Produsentkongene Nvidia og AMD har sluppet noen av sine beste produkter på mange år. Det er en god idé å vurdere hvilket grafikkort du har behov for, for dette er den delen av maskinen som gjør de tyngste løftene.",
+SNL Bottom 5,,,,,,,,,,,,,
+7,,,,,,,,,,,"Alliance Internationale de Tourisme, verdensomfattende reiselivsorganisasjon med hovedkontor i Genève.",,
+8,,,,,,,,,,,Brakteater var mynter med preg bare på den ene siden. Blanketten på brakteaterne var så tynn at adversens opphøyde preg vises negativt på reversen.,,
+9,,,,,,,,,,,"I likhet med de fleste andre latinamerikanske land har Colombia siden 1989 liberalisert sin økonomiske politikk gjennom frihandelsavtaler med nabolandene, ved å legge forholdene til rette for utenlandsk kapital og ved en mer og mer markedsorientert indre politikk. Ekspanderende oljeutvinning og en viss diversifisering av næringslivet har til en viss grad begrenset de sosiale omkostningene med denne økonomiske politikken.",,
+10,,,,,,,,,,,"Dansk kunsthistorie regnes fra steinalderens rissebilder og dekorerte keramikk til vår tids internasjonale samtidskunst. Til dansk kunsthistorie hører også kunst på Grønland, ettersom Grønland er del av Danmark.",,
+11,,,,,,,,,,,Chicagoskolen er den sosiologiske forskningsvirksomheten som foregikk ved University of Chicago mellom første og andre verdenskrig.,,
+SNL Top 5,,,,,,,,,,,,,
+12,,,,,,,,,,,Borgar er eit mannsnamn som går tilbake til det norrøne Borg-arr. I dette toledda namnet tyder forleddet ‘berging; vern’ og etterleddet ‘krigar’.,,
+13,,,,,,,,,,,Brynhild er eit kvinnenamn som går tilbake til det norrøne Bryn-hildr. I dette toledda namnet tyder forleddet ‘brynje’ og etterleddet ‘strid’.,,
+14,,,,,,,,,,,"Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.",,
+15,,,,,,,,,,,"Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.",,
+16,,,,,,,,,,,"Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.",,
+SNL Random 5,,,,,,,,,,,,,
+17,,,,,,,,,,,"Frank Bridge var en britisk komponist og bratsjist som regnes som en av sin tids viktigste musikere. Han var Benjamin Brittens viktigste lærer, og Britten hyllet ham i 1937 med verket Variations on a Theme of Frank Bridge for strykeorkester, et verk som for øvrig for alvor bragte Brittens navn frem i lyset.",,
+18,,,,,,,,,,,Bakke kloster er et tidligere nonnekloster i Trondheim. Det lå på østsiden av Nidelva litt ovenfor dennes utløp i Trondheimsfjorden.,,
+19,,,,,,,,,,,"Årevinger er en stor gruppe insekter med mer enn 4000 arter bare i Norge. Den omfatter velkjente insekter som maur, stikkeveps og humler, og husdyret honningbie.",,
+20,,,,,,,,,,,"Durativ, aksjonsart som betegner varighet. Om en kategori, typisk et verb, som beskriver en handling som foregår over tid.",,
+21,,,,,,,,,,,"Borgerlig begravelse er en tradisjonell betegnelse på gravferd som foregår uten medvirkning av et religiøst trossamfunn. Før 1. januar 1970 var borgerlig begravelse forbeholdt personer som ikke var medlem av Den norske kirke, men i dag har alle adgang til å nytte en slik seremoniform.",,
+CNN Dailymail Bottom 5,,,,,,,,,,,,,
+22,5,5,5,5,5,5,5,5,5,5,Amnesty International kaller arrestasjoner forfølgelse. Dusinvis protesterer i byen. Demonstranter er blitt opprørt over det rettslige system. Saudiske offisielle gjør referanse til avvikende grupper,"Ca 160 mennesker ble arrestert i Buraida for ulovlig protester utenfor byens Bureau of Investigation and Aktoration.
+Demonstranter har gjentatte ganger samlet seg for å kreve at de fengslede slektningene de sier har vært holdt fengslet i årevis uten å ha blitt tiltalt, prøvd eller gitt adgang til advokater.
+Amnesty International kritiserer arrestasjonene.
+",
+23,2,2,5,5,5,5,5,5,,,"Sent på regnfulle, ensomme netter er noen fristet til å google en gammel kjærlighet. En historie om en soldat og tenåring hadde en lykkelig Facebook-slutt. Inspirert forfatter søker etter og møter sin gamle kjærlighet. Men han er eldre, mer moden, versjon av den fæle fyren som knuste hjertet hennes.","Jamie Benefit skrev et brev med støtte og oppmuntring til å strekke seg ut til troppene under Gulfkrigen.
+Benefit sier at hun ønsker å minne meg selv om at kjærligheten virkelig eksisterer.
+Hun sier at det er en høy, eksistensiell orden, men likevel gyldig.
+",
+24,5,5,5,5,5,5,5,5,5,5,"Rick Steves skriver europeiske reiseguidebøker og vertskap for reiseshow. Hans TV-serie, Rick Steves' Europa, - om PBS-stasjoner. Steves selskap, Europe Through the Back Door, gjennomfører Europa-turneer.","Båter mellom Stockholm og Helsingfors tilbyr gledene av et luksuscruiseskip til en rimelig pris.
+Viking og Silja forbinder hovedstedene i Sverige og Finland.
+Begge linjene tilbyr topp moderne skip med luksuriøse måltider, rimelige lugarer, rikelig med underholdning og nok pliktfrie godsaker til å senke et skip.
+Hver linje har en eldre, mindre luksuriøs flåte, men cateringer bedre til lavbudsjettreisende, tilbyr rabatter til studenter, seniorer og skinnepass-holdere.",
+25,4,3,5,5,4,4,4,3,5,5,#TwizzlerChallenge er inspirert av Lady and the Tramp Fjorårets Ice Bucket Challenge innbrakte 115 millioner dollar.,"Utfordringen ble sendt for nesten to uker siden på Comedy Central's - Natten med for mange stjerner, - en innsamling for autismeprogrammer.
+En tweet fra sportscasteren Fred Katz utfordretTodayshowet Willie Geist og Uzo Aduba for å dele enLady og Landstrykeren lakris.
+Det høres ut som en god avtale for folka på Twizzlers.",
+26,3,2,3,3,4,4,2,2,5,5,"Nyt havnesmakingen i den portugisiske byen som gjorde drinken berømt. Såk i islandske varme kilder uten å være omgitt av andre turister. Tilbake til Italias Cinque Terre-byer, tilbake til sine maleriske tidligere jeg. Følg ČGame of Thrones sti til Nord-Irland og Dubrovnik, Kroatia.","Lonely Planets Europa-liste inkluderer de neste hotspots å besøke og mangeårige favoritter med noe nytt å nyte.
+Paris og Roma er vakre på denne tiden av året, men de er også fulle av sommerreisende.",
+CNN Dailymail Top 5,,,,,,,,,,,,,
+27,1,1,1,1,5,5,5,5,1,1,Denne siden inkluderer serien Transcript. Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd. Nederst på siden kommenterer man for en sjanse til å bli nevnt på CNN Student News. Du må være lærer eller elev i alderen 13 år eller eldre for å be om en omtale på CNN Student News Roll Call.,"Denne siden inkluderer serien Transcript og et sted du kan be om å bli nevnt på CNN Student News Roll Call.
+Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.",
+28,1,1,1,1,5,5,5,5,1,1,Daglig transkripsjon er en skriftlig versjon av hver dags CNN Student News-program. Bruk denne utskriften til å hjelpe elever med å forstå og forstå ordforrådet. Bruk ukeavisen til å teste din kunnskap om historier du så på CNN Student News.,"Denne utskriften er en skriftlig versjon av hver dags CNN Student News-program.
+Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.",
+29,1,1,1,1,5,5,5,5,1,1,Denne siden inkluderer serien Transcript. Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd. Nederst på siden kommenterer man for en sjanse til å bli nevnt på CNN Student News. Du må være lærer eller elev i alderen 13 år eller eldre for å be om en omtale på CNN Student News Roll Call.,"Denne siden inkluderer serien Transcript og et sted du kan be om å bli nevnt på CNN Student News Roll Call.
+Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
+Du må være lærer eller elev 13 år eller eldre for å be om at du blir nevnt.",
+30,1,1,1,1,5,5,5,5,1,1,"Denne siden inkluderer serien Transcript, Daily Curriculum og Maps. Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd. Dagsavisens Curriculum tilbyr Medielitteratur Dagens spørsmål, nøkkelkonsepter, raske fakta og diskusjonsspørsmål. Nederst på siden kan du dele din tilbakemelding om serien og pensumet vårt.","Denne siden inkluderer serien Transcript, Daily Curriculum, Maps som omhandler dagens show.
+Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
+Trykk her for å få tilgang til utskriften av CNN Student News-programmet.",
+31,1,1,1,1,5,5,5,5,1,1,Daglig transkripsjon er en skriftlig versjon av hver dags CNN Student News-program. Bruk denne utskriften til å hjelpe elever med å forstå og forstå ordforrådet. Bruk ukeavisen til å teste din kunnskap om historier du så på CNN Student News.,"Denne utskriften er en skriftlig versjon av hver dags CNN Student News-program.
+Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.",
+CNN Dailymail Random 5,,,,,,,,,,,,,
+32,4,4,5,5,4,4,5,5,5,5,"West Midland Police sa at mannen er fra Hodge Hill i Birmingham. Han ble arrestert kl. 7 på grunn av mistanke om terrorlovbrudd, sier politiet. Det kommer etter at tre britiske tenåringsjihadister ble arrestert i Tyrkia. Sikkerhetsoperasjonen stoppet dem i å slutte seg til islamistiske statsforkjempere i Syria.","En 18-årig mann er arrestert hjemme i Birmingham på mistanke om å forberede seg på å reise til Syria for å bli med i Den islamske staten.
+Han ble arrestert rundt kl.
+7 i dag av offiserer fra West Midlands Counter Terrorism Unit.
+En talsmann for styrken sa: \""Operasjonen var planlagt og etterretningen ledet.
+Det var ingen umiddelbar trussel mot offentlig sikkerhet.\""",
+33,3,3,3,3,4,4,5,5,3,3,"Bahamas vinner 4x400m stafett, og slår Team USA til gull. USA's kvinner slår 27 år gammel verdensrekord i 4x100m-finalen. Frankrikes Renaud Lavillenie tar gull i stavsprangfinalen for menn med olympisk rekord på 5,97m.","Bahamas påberopte seg en olympisk medalje i friidrett og felt.
+Ramon Miller løp en inspirert siste etappe til sammenlagt America's Angelo Taylor.
+Trinidad og Tobago klarte å ta bronsen ettersom de bare kunne fullføre på åttendeplass.
+USAs kvinner klarte seg bedre i sprintstafetten tidligere på kvelden og tok gullmedaljen i 4x100m for første gang siden Atlanta-lekene i 1996.",
+34,2,2,4,4,3,3,4,4,5,5,Engelsk sementerer sin posisjon som forretningsspråk. Et annet språk vil imidlertid bidra til å fremme din karriere. Det lønner seg sannsynligvis å sette karrieren på vent for å lære et språk i det lange løp.,"Den britiske utdanningssekretæren Michael Gove beklager seg til en avis i forrige uke.
+Han sier at engelsk har vært stolte av at vi ikke snakker fremmede språk, og vi må bare snakke høyere på engelsk.
+Men hvor mye vil slike tiltak være til gagn for engelsktalende, gitt deres språkdominans?",
+35,3,4,4,4,4,4,3,3,5,5,"Coca-Cola ble oppfunnet i Atlanta, Georgia i 1886 av en amerikansk farmasøyt. I dag er det verdens største drikkevareselskap. Selskapet har virksomhet i over 200 land, sysselsetter 55 000 personer.","Coca Cola ble født i Atlanta, Georgia den 8. mai 1886.
+Dr. John Stith Pemberton produserte sirupen til Coca-Cola.
+Selskapet gikk inn i Kina i 1927 og sitt 100. land Sierra Leone i 1957.",
+36,3,3,5,5,4,4,4,4,5,5,"Tolv ISAF-medlemmer døde i krasjet, sier ISAF. Helikopteret styrtet i det østlige Kabul, sier en politisjef. De drepte er identifisert som tyrkiske borgere. Det er ingen rapporter om sivile tap, sier politisjefen.","ISAF bekrefter at helikopteret gikk ned, men sier at årsaken til ulykken var ukjent.
+Det var ingen Anmeldelse om Opprørervirksomhet i Området.",

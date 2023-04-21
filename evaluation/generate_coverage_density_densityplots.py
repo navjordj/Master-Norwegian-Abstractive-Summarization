@@ -12,8 +12,8 @@ warnings.simplefilter("ignore", UserWarning)
 def main(
     filepaths=None,
     name_plot="densityplot",
-    density_upper_lim=None,
-    coverage_lower_lim=None,
+    density_upper_lim=80,
+    coverage_lower_lim=0,
     colormap="coolwarm",
     n_cols=2,
     legend_location='upper right',
@@ -32,7 +32,7 @@ def main(
 
     # Create a figure and define the subplots
     fig, axes = plt.subplots(num_rows, n_cols, figsize=(
-        6*n_cols, 6 * num_rows), sharex=True, sharey=True)
+        6*n_cols, 6 * num_rows), sharex=False, sharey=False)
     axes = axes.flatten()  # Flatten axes to make it easier to iterate
 
     # Get the global min and max compression values for the color map
@@ -40,6 +40,7 @@ def main(
     for filepath in filepaths:
         data = pd.read_csv(filepath)
         min_val, max_val = data['compression'].min(), data['compression'].max()
+        print(data["coverage"].min(), data["coverage"].max())
         if min_compression is None or min_val < min_compression:
             min_compression = min_val
         if max_compression is None or max_val > max_compression:
@@ -62,9 +63,10 @@ def main(
             ax=axes[idx],
             fill=True,
             cmap=colormap,
-            bw_adjust=0.5,
+            bw_adjust=0.1,
             levels=100,
             common_norm=True,
+            # clip=(None, (None, 1)),  # Add this line to clip the y-axis range
         )
 
         # Compute the mean compression, mean match ratio and mean number of sentences
@@ -120,7 +122,10 @@ def main(
         if density_upper_lim is not None and density_upper_lim > 0 and type(density_upper_lim) == int:
             axes[idx].set_xlim(0, density_upper_lim)
         if coverage_lower_lim is not None and coverage_lower_lim > 0 and type(coverage_lower_lim) == int:
-            axes[idx].set_ylim(bottom=coverage_lower_lim)
+            axes[idx].set_ylim(coverage_lower_lim, 1)
+
+        # Add the following line to set the y-axis ticks explicitly
+    axes[idx].set_yticks(np.arange(0, 1.1, 0.1))
 
     # Remove empty subplots
     for idx in range(len(filepaths), len(axes)):
@@ -143,7 +148,7 @@ def main(
     fig.suptitle(fig_title, fontsize=16)
 
     # Optimize the layout and display the figure
-    plt.tight_layout(rect=[0, 0, 1, 0.95])
+    plt.tight_layout(rect=[0, 0, 1, 1])
 
     # Save the figure as a high-resolution PNG file
     plt.savefig(f"plots/{name_plot}.png", dpi=300)
