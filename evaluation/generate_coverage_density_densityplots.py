@@ -1,10 +1,12 @@
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-import os
-import numpy as np
 import textwrap
+import numpy as np
+import os
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import warnings
+warnings.simplefilter("ignore", UserWarning)
 
 
 def main(
@@ -14,11 +16,16 @@ def main(
     coverage_lower_lim=None,
     colormap="coolwarm",
     n_cols=2,
-    legend_location='upper right'
+    legend_location='upper right',
+    show_plot=False,
 ):
-
+    # Check if filepaths is None, end if
     if filepaths is None:
         return
+
+    print("Generating density plots...")
+    print("Filepaths: ", filepaths)
+    print("Name plot: ", name_plot)
 
     # Calculate the number of rows for the subplots
     num_rows = int(np.ceil(len(filepaths) / n_cols))
@@ -54,7 +61,7 @@ def main(
             y='coverage',
             ax=axes[idx],
             fill=True,
-            cmap='coolwarm',
+            cmap=colormap,
             bw_adjust=0.5,
             levels=100,
             common_norm=True,
@@ -131,6 +138,7 @@ def main(
     fig_title = f'Normalized Bivariate Density Plots for Coverage and Density {" ".join(x[0].upper() + x[1:] for x in name_plot.split("_"))}'
     fig_title = fig_title.replace("Cnn", "CNN Daily Mail")
     fig_title = fig_title.replace("Snl", "SNL")
+    fig_title = fig_title.replace(colormap, "")
     wrapped_title = textwrap.fill(fig_title, width=60)
     fig.suptitle(fig_title, fontsize=16)
 
@@ -138,9 +146,10 @@ def main(
     plt.tight_layout(rect=[0, 0, 1, 0.95])
 
     # Save the figure as a high-resolution PNG file
-    plt.savefig(f'plots/{name_plot}.png', dpi=300)
+    plt.savefig(f"plots/{name_plot}.png", dpi=300)
 
-    plt.show()
+    if show_plot:
+        plt.show()
 
 
 if __name__ == '__main__':
@@ -173,35 +182,42 @@ if __name__ == '__main__':
         'matches_pred_test/test/cnn_daily_mail_nor_final_test_large_matches.csv',
     ]
 
+    # Color maps: https://matplotlib.org/stable/tutorials/colors/colormaps.html
+    colormap = "coolwarm"
+
     # Main function calls to create figures
 
     main(
         filepaths=filepaths_test_pred_snl,
-        name_plot="densityplot_test_pred_snl",
+        name_plot=f"densityplot_test_pred_snl_{colormap}",
         density_upper_lim=18,
         legend_location='lower right',
         n_cols=1,
+        colormap=colormap,
     )
 
     main(
         filepaths=filepaths_test_pred_cnn,
-        name_plot="densityplot_test_pred_cnn",
+        name_plot=f"densityplot_test_pred_cnn_{colormap}",
         density_upper_lim=80,
         legend_location='lower right',
         coverage_lower_lim=0.2,
         n_cols=1,
+        colormap=colormap,
     )
 
     main(
         filepaths=filepaths_test_pred,
-        name_plot="densityplot_test_pred_SNL_and_CNN",
+        name_plot=f"densityplot_test_pred_SNL_and_CNN_{colormap}",
         density_upper_lim=None,
         legend_location='lower right',
+        colormap=colormap,
     )
 
     main(
         filepaths=filepaths_val_train,
-        name_plot="densityplot_validation_train_SNL_and_CNN",
+        name_plot=f"densityplot_validation_train_SNL_and_CNN_{colormap}",
         density_upper_lim=10,
         legend_location='lower right',
+        colormap=colormap,
     )
