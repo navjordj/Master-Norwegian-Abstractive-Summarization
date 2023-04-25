@@ -1,0 +1,75 @@
+ArticleNr,Informativeness,,Relevance,,Fluency,,Coherence,,Factuality,,Label,Summary
+Aftenposten,Kors,Nav,Kors,Nav,Kors,Nav,Kors,Nav,Kors,Nav,,
+1,2,1,3,2,4,4,5,5,3,2,En mann i 40-årene er siktet for drapsforsøk på Sunnaas sykehus. Ifølge VG var det natt til onsdag at en kvinne ble alvorlig skadet da hun besøkte mannen.,Sunnaas sykehus er et åpent sykehus i Oslo. Sykehuset ligger på Nesodden utenfor Oslo. Det er Norges største spesialsykehus innen fysikalsk medisin.
+2,4,4,5,5,5,5,5,5,5,5,"Prisene opp 6,5 prosent det siste året. Årsaken til den økte veksttakten er først og fremst at prisene på strøm steg mer fra februar til mars i år sammenlignet med i fjor. Dette trekker prisendringen opp.","Norges Bank har hevet renten til 3,0 prosent i mars i år. Inflasjonen snur igjen opp etter å ha dempet seg i måneden før, og prisene på matvarer og alkoholfrie drikkevarer er fortsatt høye."
+Wikipedia,,,,,,,,,,,,
+3,3,4,4,5,5,5,,,4,3,,Vladimir Levenshtein-distanse er et mål for redigeringsdistanse mellom to strenger (f.eks. to ordformer).
+4,4,3,5,5,5,5,,,5,5,,Telefonkiosk er en bygning eller et avlukke med dør som inneholder en fastmontert telefon til allmenn bruk.
+Kvinneguiden,,,,,,,,,,,,
+5,1,1,1,1,4,5,3,4,2,2,,"Dette er et spørsmål jeg ønsker å stille til foreldrene i forbindelse med bruddet i familien. Det er svært vanskelig å svare på spørsmålet, men det er vanvittig av meg å sette foten ned og ikke finner meg i mer psykisk mishandling. Jeg har bestemt meg for å dra til yngstes konfirmasjon."
+Komplett.no,,,,,,,,,,,,
+6,4,4,5,5,5,5,5,5,4,5,,En datamaskin har et skjermkort som gjør det mulig å vise levende bilder og filmer på skjermen. Skjermkortet er en viktig komponent for å få det beste ut av spillopplevelsene på en datamaskin.
+SNL Bottom 5,,,,,,,,,,,,
+7,5,5,5,5,5,5,5,5,5,5,"Alliance Internationale de Tourisme, verdensomfattende reiselivsorganisasjon med hovedkontor i Genève.","AIT er en internasjonal organisasjon for reiselivs- og motororganisasjoner.
+Organisasjonen ble stiftet i 1898 som en ideell, ikke-statlig organisasjon som representerer interessene til nasjonale foreninger og forbund.
+AIT har konsultativ status ved FN siden 1947."
+8,4,4,5,5,5,5,4,4,5,5,Brakteater var mynter med preg bare på den ene siden. Blanketten på brakteaterne var så tynn at adversens opphøyde preg vises negativt på reversen.,"Brakteat er en myntform som ble preget i Norge fra 1100-tallet til slutten av 1500-tallet.
+I Norge var brakteat den dominerende myntformen i nordisk middelalder."
+9,4,4,4,3,5,5,4,4,5,5,"I likhet med de fleste andre latinamerikanske land har Colombia siden 1989 liberalisert sin økonomiske politikk gjennom frihandelsavtaler med nabolandene, ved å legge forholdene til rette for utenlandsk kapital og ved en mer og mer markedsorientert indre politikk. Ekspanderende oljeutvinning og en viss diversifisering av næringslivet har til en viss grad begrenset de sosiale omkostningene med denne økonomiske politikken.","Colombia er en republikk i Mellom-Amerika.
+Landet har en rik økonomi med rike biologiske, mineralske og energimessige ressurser.
+Den økonomiske veksten har stagnert i perioden 1994–2002 med 1,6 % i faste priser.
+BNP per innb.
+var i 2003 anslått til ca.
+6300 USD.
+Den svarte økonomien vokste i omfang i de senere år, spesielt den illegale handelen med marihuana og kokain."
+10,1,1,4,5,5,5,1,1,5,5,"Dansk kunsthistorie regnes fra steinalderens rissebilder og dekorerte keramikk til vår tids internasjonale samtidskunst. Til dansk kunsthistorie hører også kunst på Grønland, ettersom Grønland er del av Danmark.","Danmarks kunst er preget av sterke kulturkontakter med sørlige og sørvestlige områder.
+I dette tidsrommet utvikles støpekunsten basert på bronse, jern og bølgebånd."
+11,1,1,2,3,5,5,,,3,3,Chicagoskolen er den sosiologiske forskningsvirksomheten som foregikk ved University of Chicago mellom første og andre verdenskrig.,"Sosialpsykologi er en retning i sosiologien som ble utviklet i 1920-årene, og som i senere år fikk betydning for utviklingen av sosialpsykologien i Norge."
+SNL Top 5,,,,,,,,,,,,
+12,2,2,1,1,5,5,2,2,1,1,Borgar er eit mannsnamn som går tilbake til det norrøne Borg-arr. I dette toledda namnet tyder forleddet ‘berging; vern’ og etterleddet ‘krigar’.,"Borgar er eit mannsnamn som går tilbake til det norrøne Borgarr.
+I dette toledda namnet tyder forleddet ‘strid’ og etterleddet’ ‘gud’.
+Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
+Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge."
+13,2,2,2,2,5,5,5,5,2,2,Brynhild er eit kvinnenamn som går tilbake til det norrøne Bryn-hildr. I dette toledda namnet tyder forleddet ‘brynje’ og etterleddet ‘strid’.,"Brynhild er eit kvinnenamn som går tilbake til det norrøne Bryn-hildr.
+I dette toledda namnet tyder forleddet ‘gud’."
+14,1,1,1,1,5,5,5,5,1,1,"Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.","Dette er en datoartikkel.
+Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
+Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge."
+15,1,1,1,1,5,5,5,5,1,1,"Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.","Dette er en datoartikkel.
+Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
+Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge."
+16,1,1,1,1,5,5,5,5,1,1,"Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå. Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.","Dette er en datoartikkel.
+Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
+Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge."
+SNL Random 5,,,,,,,,,,,,
+17,2,2,2,2,5,5,5,5,2,1,"Frank Bridge var en britisk komponist og bratsjist som regnes som en av sin tids viktigste musikere. Han var Benjamin Brittens viktigste lærer, og Britten hyllet ham i 1937 med verket Variations on a Theme of Frank Bridge for strykeorkester, et verk som for øvrig for alvor bragte Brittens navn frem i lyset.","John Bridge var en britisk komponist og dirigent.
+Han var en av de ledende komponistene i Storbritannia og Nord-Irland på 1900-tallet.
+"
+18,2,1,1,1,5,5,5,5,1,2,Bakke kloster er et tidligere nonnekloster i Trondheim. Det lå på østsiden av Nidelva litt ovenfor dennes utløp i Trondheimsfjorden.,"Bakke kloster er et kloster i Bakke kommune i Vestfold og Telemark fylke.
+Klosteret ligger på østsiden av Bakkefjorden.
+"
+19,4,4,5,5,5,5,5,5,5,5,"Årevinger er en stor gruppe insekter med mer enn 4000 arter bare i Norge. Den omfatter velkjente insekter som maur, stikkeveps og humler, og husdyret honningbie.","Årevinger er en gruppe insekter i ordenen veps.
+De omfatter rovdyr, pollenspisere, honningsugere, gallvepser og snyltevepser.
+"
+20,3,2,4,4,5,5,,,2,2,"Durativ, aksjonsart som betegner varighet. Om en kategori, typisk et verb, som beskriver en handling som foregår over tid.",Durative verb er et verb som brukes i aksjonsart for å si noe om hvor lenge eller om hendelsen har en slutt.
+21,5,5,5,5,5,5,5,5,5,5,"Borgerlig begravelse er en tradisjonell betegnelse på gravferd som foregår uten medvirkning av et religiøst trossamfunn. Før 1. januar 1970 var borgerlig begravelse forbeholdt personer som ikke var medlem av Den norske kirke, men i dag har alle adgang til å nytte en slik seremoniform.","Borgerlig begravelse er en seremoni for personer som ikke er medlem av en kirke eller en folkekirke.
+I Norge brukes betegnelsen «borgerlig bisettelse» og «humanistisk begravelse» som en uformell samlebetegnelse for ikke-religiøse gravferdsseremonier i regi av Human-Etisk Forbund eller Humanistene (tidligere Humanistforbundet).
+"
+CNN Dailymail Bottom 5,,,,,,,,,,,,
+22,,,,,,,,,,,Amnesty International kaller arrestasjoner forfølgelse. Dusinvis protesterer i byen. Demonstranter er blitt opprørt over det rettslige system. Saudiske offisielle gjør referanse til avvikende grupper,
+23,,,,,,,,,,,"Sent på regnfulle, ensomme netter er noen fristet til å google en gammel kjærlighet. En historie om en soldat og tenåring hadde en lykkelig Facebook-slutt. Inspirert forfatter søker etter og møter sin gamle kjærlighet. Men han er eldre, mer moden, versjon av den fæle fyren som knuste hjertet hennes.",
+24,,,,,,,,,,,"Rick Steves skriver europeiske reiseguidebøker og vertskap for reiseshow. Hans TV-serie, Rick Steves' Europa, - om PBS-stasjoner. Steves selskap, Europe Through the Back Door, gjennomfører Europa-turneer.",
+25,,,,,,,,,,,#TwizzlerChallenge er inspirert av Lady and the Tramp Fjorårets Ice Bucket Challenge innbrakte 115 millioner dollar.,
+26,,,,,,,,,,,"Nyt havnesmakingen i den portugisiske byen som gjorde drinken berømt. Såk i islandske varme kilder uten å være omgitt av andre turister. Tilbake til Italias Cinque Terre-byer, tilbake til sine maleriske tidligere jeg. Følg ČGame of Thrones sti til Nord-Irland og Dubrovnik, Kroatia.",
+CNN Dailymail Top 5,,,,,,,,,,,,
+27,,,,,,,,,,,Denne siden inkluderer serien Transcript. Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd. Nederst på siden kommenterer man for en sjanse til å bli nevnt på CNN Student News. Du må være lærer eller elev i alderen 13 år eller eldre for å be om en omtale på CNN Student News Roll Call.,
+28,,,,,,,,,,,Daglig transkripsjon er en skriftlig versjon av hver dags CNN Student News-program. Bruk denne utskriften til å hjelpe elever med å forstå og forstå ordforrådet. Bruk ukeavisen til å teste din kunnskap om historier du så på CNN Student News.,
+29,,,,,,,,,,,Denne siden inkluderer serien Transcript. Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd. Nederst på siden kommenterer man for en sjanse til å bli nevnt på CNN Student News. Du må være lærer eller elev i alderen 13 år eller eldre for å be om en omtale på CNN Student News Roll Call.,
+30,,,,,,,,,,,"Denne siden inkluderer serien Transcript, Daily Curriculum og Maps. Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd. Dagsavisens Curriculum tilbyr Medielitteratur Dagens spørsmål, nøkkelkonsepter, raske fakta og diskusjonsspørsmål. Nederst på siden kan du dele din tilbakemelding om serien og pensumet vårt.",
+31,,,,,,,,,,,Daglig transkripsjon er en skriftlig versjon av hver dags CNN Student News-program. Bruk denne utskriften til å hjelpe elever med å forstå og forstå ordforrådet. Bruk ukeavisen til å teste din kunnskap om historier du så på CNN Student News.,
+CNN Dailymail Random 5,,,,,,,,,,,,
+32,,,,,,,,,,,"West Midland Police sa at mannen er fra Hodge Hill i Birmingham. Han ble arrestert kl. 7 på grunn av mistanke om terrorlovbrudd, sier politiet. Det kommer etter at tre britiske tenåringsjihadister ble arrestert i Tyrkia. Sikkerhetsoperasjonen stoppet dem i å slutte seg til islamistiske statsforkjempere i Syria.",
+33,,,,,,,,,,,"Bahamas vinner 4x400m stafett, og slår Team USA til gull. USA's kvinner slår 27 år gammel verdensrekord i 4x100m-finalen. Frankrikes Renaud Lavillenie tar gull i stavsprangfinalen for menn med olympisk rekord på 5,97m.",
+34,,,,,,,,,,,Engelsk sementerer sin posisjon som forretningsspråk. Et annet språk vil imidlertid bidra til å fremme din karriere. Det lønner seg sannsynligvis å sette karrieren på vent for å lære et språk i det lange løp.,
+35,,,,,,,,,,,"Coca-Cola ble oppfunnet i Atlanta, Georgia i 1886 av en amerikansk farmasøyt. I dag er det verdens største drikkevareselskap. Selskapet har virksomhet i over 200 land, sysselsetter 55 000 personer.",
+36,,,,,,,,,,,"Tolv ISAF-medlemmer døde i krasjet, sier ISAF. Helikopteret styrtet i det østlige Kabul, sier en politisjef. De drepte er identifisert som tyrkiske borgere. Det er ingen rapporter om sivile tap, sier politisjefen.",
