@@ -56,6 +56,12 @@ def pack_row_results(row, dataset_dict, dataset_key, dimension_key):
     pass
 
 
+def is_nan(value):
+    if value is None or str(value) == "NaN" or str(value) == "nan":
+        return True
+    return False
+
+
 def get_human_eval_results_from_csv(path: str) -> dict:
     if path is None:
         raise ValueError(
@@ -81,10 +87,6 @@ def get_human_eval_results_from_csv(path: str) -> dict:
                 # Skips missing values as they are not relevant
                 # We can infer missing values later as the number of samples is fixed
 
-                if value is None or str(value) == "NaN" or str(value) == "nan":
-                    # print(value)
-                    continue
-
                 # Updates the dimension key as we iterate through the columns
                 # and works through the list with indexing
                 # both the data and the dimensions are in the same order
@@ -94,14 +96,22 @@ def get_human_eval_results_from_csv(path: str) -> dict:
                 if dimension_key is None:
                     continue
 
+                # print(value)
+                # if value is None or str(value) == "NaN" or str(value) == "nan":
+                # print(value)
+                #    continue
+                # The values are read correctly now, and only added if they are not NaN
+                # TODO: evaluate if we want to add the NaN values as 0, None or something else
                 # Makes sure we don't add the columns not in the dimensions list
                 # as all of them have "Kors" and "Nav" secondary keys
                 if col_key[1] == "Kors":
-                    dataset_results[dataset_key][dimension_key].append(
-                        int(value))
+                    if not is_nan(value):
+                        dataset_results[dataset_key][dimension_key].append(
+                            int(value))
                 elif col_key[1] == "Nav":
-                    dataset_results[dataset_key][dimension_key].append(
-                        int(value))
+                    if not is_nan(value):
+                        dataset_results[dataset_key][dimension_key].append(
+                            int(value))
                 else:
                     continue
 
@@ -116,22 +126,20 @@ def main():
     # average out the scores between "Kors" and "Nav"
     # and average out the scores between the 10 samplings listed in DATASET_RES
     total_results = copy.deepcopy(MODEL_RES)
+
     total_results["CNN Base"] = get_human_eval_results_from_csv(
-        "human_eval_results/EvaluationModels - Eval CNN Base.csv"
-    )
+        "human_eval_results/EvaluationModels - Eval CNN Base.csv")
     print("Done with CNN Base")
     total_results["CNN Large"] = get_human_eval_results_from_csv(
-        "human_eval_results/EvaluationModels - Eval CNN Large.csv"
-    )
+        "human_eval_results/EvaluationModels - Eval CNN Large.csv")
     print("Done with CNN Large")
     total_results["SNL Base"] = get_human_eval_results_from_csv(
-        "human_eval_results/EvaluationModels - Eval SNL Base.csv"
-    )
+        "human_eval_results/EvaluationModels - Eval SNL Base.csv")
     print("Done with SNL Base")
     total_results["SNL Large"] = get_human_eval_results_from_csv(
-        "human_eval_results/EvaluationModels - Eval SNL Large.csv"
-    )
+        "human_eval_results/EvaluationModels - Eval SNL Large.csv")
     print("Done with SNL Large")
+
     with open("human_eval_results_gathered_and_packed.json", "w") as write_file:
         json.dump(total_results, write_file, indent=4)
     print("Done writing JSON data into file with indent=4")
