@@ -49,9 +49,16 @@ DIMENSIONS_RES = {
 }
 
 
-def get_human_eval_results_from_csv(path=None):
+def pack_row_results(row, dataset_dict, dataset_key, dimension_key):
+    # To be implemented, if we want less nested loops logic
+    pass
+
+
+def get_human_eval_results_from_csv(path: str) -> dict:
     if path is None:
-        return None
+        raise ValueError(
+            "Path is None, must be a valid path to a csv file in human_eval_results/"
+        )
 
     df = pd.read_csv(
         path, header=[0, 1], index_col=0)
@@ -65,25 +72,25 @@ def get_human_eval_results_from_csv(path=None):
     # We have 36 samples that were evaluated by both "Kors" and "Nav"
     # valid_indices = [str(i) for i in range(36)]
     for dataset_key, value in DATASET_INDICES.items():
-        # print(dataset_key, value)
         dataset_results[dataset_key] = DIMENSIONS_RES.copy()
-        for row_index in value:
-            row = df.loc[str(row_index)]
 
+        for row_index in value:
+
+            row = df.loc[str(row_index)]
             dimensions_index = 0
             dimension_key = None
+
             for col_key, value in row.items():
-                print(col_key, value)
+
                 if col_key[0] in DIMENSIONS[dimensions_index:-1]:
-                    dimensions_key = DIMENSIONS[dimensions_index]
-                    print(dimensions_key)
+                    dimension_key = DIMENSIONS[dimensions_index]
+
                     dimensions_index += 1
-                if dimensions_key is None:
+                if dimension_key is None:
                     continue
 
                 if col_key[1] == "Kors":
-                    print(dataset_key)
-                    print(dimension_key)
+
                     dataset_results[dataset_key][dimension_key].append(value)
 
                 elif col_key[1] == "Nav":
@@ -91,7 +98,8 @@ def get_human_eval_results_from_csv(path=None):
                 else:
                     continue
 
-    print(dataset_results)
+    # print(dataset_results)
+    return dataset_results
 
 
 def main():
