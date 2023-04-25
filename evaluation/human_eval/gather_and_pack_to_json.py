@@ -1,4 +1,6 @@
 import pandas as pd
+import copy
+import json
 
 DIMENSIONS = ["Informativeness", "Relevance",
               "Fluency", "Coherence", "Factuality"]
@@ -63,16 +65,11 @@ def get_human_eval_results_from_csv(path: str) -> dict:
     df = pd.read_csv(
         path, header=[0, 1], index_col=0)
 
-    dataset_results = DATASETS_RES.copy()
-    # aggregate the results for "Kors" and "Nav" for the five dimensions
-    # "Informativeness", "Relevance", "Fluency", "Coherence", "Factuality"
+    # DEEP COPY IS IMPORTANT for all the templates
+    dataset_results = copy.deepcopy(DATASETS_RES)
 
-    # average out the scores between "Kors" and "Nav" for each dimension
-
-    # We have 36 samples that were evaluated by both "Kors" and "Nav"
-    # valid_indices = [str(i) for i in range(36)]
     for dataset_key, value in DATASET_INDICES.items():
-        dataset_results[dataset_key] = DIMENSIONS_RES.copy()
+        dataset_results[dataset_key] = copy.deepcopy(DIMENSIONS_RES)
 
         for row_index in value:
 
@@ -81,20 +78,30 @@ def get_human_eval_results_from_csv(path: str) -> dict:
             dimension_key = None
 
             for col_key, value in row.items():
+                # Skips missing values as they are not relevant
+                # We can infer missing values later as the number of samples is fixed
 
-                if col_key[0] in DIMENSIONS[dimensions_index:-1]:
+                if value is None or str(value) == "NaN" or str(value) == "nan":
+                    # print(value)
+                    continue
+
+                # Updates the dimension key as we iterate through the columns
+                # and works through the list with indexing
+                # both the data and the dimensions are in the same order
+                if col_key[0] in DIMENSIONS[dimensions_index:]:
                     dimension_key = DIMENSIONS[dimensions_index]
-
                     dimensions_index += 1
                 if dimension_key is None:
                     continue
 
+                # Makes sure we don't add the columns not in the dimensions list
+                # as all of them have "Kors" and "Nav" secondary keys
                 if col_key[1] == "Kors":
-
-                    dataset_results[dataset_key][dimension_key].append(value)
-
+                    dataset_results[dataset_key][dimension_key].append(
+                        int(value))
                 elif col_key[1] == "Nav":
-                    dataset_results[dataset_key][dimension_key].append(value)
+                    dataset_results[dataset_key][dimension_key].append(
+                        int(value))
                 else:
                     continue
 
@@ -107,22 +114,27 @@ def main():
     # and for each model
     # and for each dataset
     # average out the scores between "Kors" and "Nav"
-
-    total_results = MODEL_RES.copy()
-
+    # and average out the scores between the 10 samplings listed in DATASET_RES
+    total_results = copy.deepcopy(MODEL_RES)
     total_results["CNN Base"] = get_human_eval_results_from_csv(
         "human_eval_results/EvaluationModels - Eval CNN Base.csv"
     )
+    print("Done with CNN Base")
     total_results["CNN Large"] = get_human_eval_results_from_csv(
         "human_eval_results/EvaluationModels - Eval CNN Large.csv"
     )
+    print("Done with CNN Large")
     total_results["SNL Base"] = get_human_eval_results_from_csv(
         "human_eval_results/EvaluationModels - Eval SNL Base.csv"
     )
+    print("Done with SNL Base")
     total_results["SNL Large"] = get_human_eval_results_from_csv(
         "human_eval_results/EvaluationModels - Eval SNL Large.csv"
     )
-    print(total_results)
+    print("Done with SNL Large")
+    with open("human_eval_results_gathered_and_packed.json", "w") as write_file:
+        json.dump(total_results, write_file, indent=4)
+    print("Done writing JSON data into file with indent=4")
 
 
 if __name__ == "__main__":
