@@ -10,7 +10,7 @@ def get_human_eval_results_from_json(path: str) -> dict:
 
 
 def mean(lst):
-    print(lst)
+    # print(lst)
     if lst is None:
         return None
     if lst == []:
@@ -63,7 +63,39 @@ def get_mean_scores_from_json(filepath: str) -> dict:
 
 def main():
     filepath = "human_eval_results_gathered_and_packed.json"
-    get_mean_scores_from_json(filepath)
+    model_scores = get_mean_scores_from_json(filepath)
+    # Get a dataframe from the dictionary
+
+    df = pd.DataFrame.from_dict(model_scores, orient="index")  # .transpose()
+
+    entry_names = [x for x in df.transpose().columns]
+    # print(entry_names)
+    new_index = [[], []]
+    for name in entry_names:
+        new_index[0].append(name.split(" ")[0])
+        new_index[1].append(" ".join(name.split(" ")[1:]))
+
+    tuples = list(zip(*new_index))
+    # print(tuples)
+    index = pd.MultiIndex.from_tuples(tuples, names=["Dataset", "Model"])
+    df.index = index
+
+    # Remove from dataframe where CNN is evaluated on SNL data and vice versa
+
+    for dataset, model in df.index:
+        print(dataset, model)
+        if (
+            ("CNN" in dataset and "CNN" not in model)
+            or
+            ("SNL" in dataset and "SNL" not in model)
+        ):
+            df.drop((dataset, model), axis=0, inplace=True)
+        # print(df.loc[dataset, model])
+
+    print(df)
+
+    df.to_latex("human_eval_aggregated_results_latex_table.tex",
+                float_format="%.2f")
 
 
 if __name__ == "__main__":
