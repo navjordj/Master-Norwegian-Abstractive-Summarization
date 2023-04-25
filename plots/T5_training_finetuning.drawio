@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net" modified="2023-04-25T23:19:20.676Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="kxf6PlPXmm8_v1FZ8LGv" version="21.1.7" type="google">
+  <diagram name="Page-1" id="jphnZzhHIwtE4VJLW7Re">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-13" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="4LUfLGTZXq6y9p_uOSIi-1" target="4LUfLGTZXq6y9p_uOSIi-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-19" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="4LUfLGTZXq6y9p_uOSIi-1" target="4LUfLGTZXq6y9p_uOSIi-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-1" value="T5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=31;" vertex="1" parent="1">
+          <mxGeometry x="490" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-3" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4LUfLGTZXq6y9p_uOSIi-4" target="4LUfLGTZXq6y9p_uOSIi-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="110" as="targetPoint" />
+            <mxPoint x="390" y="180" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-4" value="&quot;Translate English to Norwegian: God day my friend.&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="130" y="200" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-5" value="&quot;CoLA the sentence: I am searching for this application.&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="80" y="270" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-6" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4LUfLGTZXq6y9p_uOSIi-5" target="4LUfLGTZXq6y9p_uOSIi-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="471" as="targetPoint" />
+            <mxPoint x="420" y="356" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-8" value="&quot;summarize: Nigeria is losing about 6 billion to 9 billion yearly to the non-passage of the bill, which would have given legal teeth to the water sub-sector for optimal performance like other sectors.&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="90" y="334" width="330" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-9" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4LUfLGTZXq6y9p_uOSIi-8" target="4LUfLGTZXq6y9p_uOSIi-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="320" as="targetPoint" />
+            <mxPoint x="450" y="426" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-10" value="&quot;stsb sentence1: I&#39;m overjoyed about today&#39;s event. sentence2: I&#39;m so happy today&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="180" y="430" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-11" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4LUfLGTZXq6y9p_uOSIi-10" target="4LUfLGTZXq6y9p_uOSIi-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="446" as="targetPoint" />
+            <mxPoint x="520" y="532" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-12" value="&quot;4.2&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="680" y="420" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-14" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4LUfLGTZXq6y9p_uOSIi-1" target="4LUfLGTZXq6y9p_uOSIi-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="585" y="354" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-15" value="&quot;Nigeria is losing billions yearly due to a bill not passing&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="725" y="344" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-16" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" target="4LUfLGTZXq6y9p_uOSIi-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="340" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-17" value="&quot;Nearly acceptable, needs more context&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="725" y="267" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4LUfLGTZXq6y9p_uOSIi-18" value="&quot;God dag min venn&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="695" y="200" width="155" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
