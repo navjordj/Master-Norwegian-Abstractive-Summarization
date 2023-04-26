@@ -32,7 +32,7 @@ def main(
 
     # Create a figure and define the subplots
     fig, axes = plt.subplots(num_rows, n_cols, figsize=(
-        6*n_cols, 6 * num_rows), sharex=False, sharey=True)
+        6*n_cols, 6 * num_rows), sharex=False, sharey=False)
     axes = axes.flatten()  # Flatten axes to make it easier to iterate
 
     # Get the global min and max compression values for the color map
@@ -63,15 +63,10 @@ def main(
             ax=axes[idx],
             fill=True,
             cmap=colormap,
-            # rug="True",
-            # kind="kde"
             bw_adjust=0.1,
             levels=100,
-            thresh=0.05,
             common_norm=True,
-            # Add this line to clip the y-axis range
-            # clip=((None, None), (-0.1, 1)),
-            cut=0,
+            # clip=(None, (None, 1)),  # Add this line to clip the y-axis range
         )
 
         # Compute the mean compression, mean match ratio and mean number of sentences
@@ -150,10 +145,10 @@ def main(
     fig_title = fig_title.replace("Snl", "SNL")
     fig_title = fig_title.replace(colormap, "")
     wrapped_title = textwrap.fill(fig_title, width=60)
-    fig.suptitle(fig_title, fontsize=14)
+    fig.suptitle(fig_title, fontsize=16)
 
     # Optimize the layout and display the figure
-    plt.tight_layout(rect=[0, 0, 1, 0.98])
+    plt.tight_layout(rect=[0, 0, 1, 1])
 
     # Save the figure as a high-resolution PNG file
     plt.savefig(f"plots/{name_plot}.png", dpi=300)
@@ -163,6 +158,7 @@ def main(
 
 
 if __name__ == '__main__':
+    # List of filepaths to the CSV files
     # List of filepaths to the CSV files
     filepaths_val_train = [
         'matches_pred_test/validation/cnn_daily_mail_nor_final_validation_highlights_matches.csv',
@@ -200,7 +196,7 @@ if __name__ == '__main__':
     main(
         filepaths=filepaths_test_pred_snl,
         name_plot=f"densityplot_test_pred_snl_{colormap}",
-        density_upper_lim=30,
+        density_upper_lim=18,
         legend_location='lower right',
         n_cols=1,
         colormap=colormap,
@@ -209,9 +205,9 @@ if __name__ == '__main__':
     main(
         filepaths=filepaths_test_pred_cnn,
         name_plot=f"densityplot_test_pred_cnn_{colormap}",
-        # density_upper_lim=80,
+        density_upper_lim=80,
         legend_location='lower right',
-        # coverage_lower_lim=0.2,
+        coverage_lower_lim=0.2,
         n_cols=1,
         colormap=colormap,
     )
@@ -227,7 +223,7 @@ if __name__ == '__main__':
     main(
         filepaths=filepaths_val_train,
         name_plot=f"densityplot_validation_train_SNL_and_CNN_{colormap}",
-        # density_upper_lim=10,
+        density_upper_lim=10,
         legend_location='lower right',
         colormap=colormap,
     )
