@@ -83,7 +83,7 @@ def main():
     # Remove from dataframe where CNN is evaluated on SNL data and vice versa
 
     for dataset, model in df.index:
-        print(dataset, model)
+        # print(dataset, model)
         if (
             ("CNN" in dataset and "CNN" not in model)
             or
@@ -92,10 +92,20 @@ def main():
             df.drop((dataset, model), axis=0, inplace=True)
         # print(df.loc[dataset, model])
 
-    print(df)
+    # print(df)
 
+    # datasets and models
     df.to_latex("human_eval_aggregated_results_latex_table.tex",
                 float_format="%.2f")
+
+    # only models without top samples
+    df.drop(("CNN_Top"), axis=0, inplace=True)
+    df.drop(("SNL_Top"), axis=0, inplace=True)
+    # print(df)
+    df = df.groupby(level=1).mean()
+    df.transpose().to_latex("human_eval_aggregated_results_grouped_by_model_latex_table.tex",
+                            float_format="%.2f")
+    # print(df.groupby(level=1).mean().)
 
 
 if __name__ == "__main__":
