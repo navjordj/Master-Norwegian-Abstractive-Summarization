@@ -145,12 +145,12 @@ def main(
     if "densityplot_" in name_plot:
         name_plot = name_plot.replace("densityplot_", "")
     # Set the title for the figure
-    fig_title = f'Normalized Bivariate Density Plots for Coverage and Density {" ".join(x[0].upper() + x[1:] for x in name_plot.split("_"))}'
+    fig_title = f'Norm. Bivar. Density Plots Coverage and Density {" ".join(x[0].upper() + x[1:] for x in name_plot.split("_")[:-1])}'
     fig_title = fig_title.replace("Cnn", "CNN Daily Mail")
     fig_title = fig_title.replace("Snl", "SNL")
     fig_title = fig_title.replace(colormap, "")
     wrapped_title = textwrap.fill(fig_title, width=60)
-    fig.suptitle(fig_title, fontsize=14)
+    fig.suptitle(fig_title, fontsize=13)
 
     # Optimize the layout and display the figure
     plt.tight_layout(rect=[0, 0, 1, 0.98])
@@ -224,10 +224,10 @@ if __name__ == '__main__':
         colormap=colormap,
     )
 
-    main(
+    """main(
         filepaths=filepaths_val_train,
         name_plot=f"densityplot_validation_train_SNL_and_CNN_{colormap}",
         # density_upper_lim=10,
         legend_location='lower right',
         colormap=colormap,
-    )
+    )"""
