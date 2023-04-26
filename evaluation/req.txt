@@ -12,3 +12,5 @@ rouge_score
 spacy
 seaborn
 textwrap
+plotly
+plotly-geo

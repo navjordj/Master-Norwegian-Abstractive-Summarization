@@ -113,7 +113,7 @@ def checkup_test_article_highlights(dataset, sensitivy=95, split="test"):
                               "compression",
                               "extractive_fragments"
                               ])
-    res_file = f"{dataset.split('/')[-1]}_{split}__highlights_matches.csv"
+    res_file = f"{dataset.split('/')[-1]}_{split}_highlights_matches.csv"
     matches_df.to_csv(res_file, index=False)
 
 

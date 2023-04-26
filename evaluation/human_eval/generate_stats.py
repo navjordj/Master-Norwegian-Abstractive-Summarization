@@ -99,8 +99,9 @@ def main():
                 float_format="%.2f")
 
     # only models without top samples
-    df.drop(("CNN_Top"), axis=0, inplace=True)
-    df.drop(("SNL_Top"), axis=0, inplace=True)
+    #
+    # df.drop(("CNN_Top"), axis=0, inplace=True)
+    # df.drop(("SNL_Top"), axis=0, inplace=True)
     # print(df)
     df = df.groupby(level=1).mean()
     df.transpose().to_latex("human_eval_aggregated_results_grouped_by_model_latex_table.tex",
