@@ -1,0 +1,39 @@
+<mxfile host="app.diagrams.net" modified="2023-04-26T18:17:23.630Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="RBsBHoZfQy23449zo_vE" version="21.1.1" type="device">
+  <diagram name="Page-1" id="nQSOTMZtrE7MC5jZJ6LV">
+    <mxGraphModel dx="1434" dy="739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8_HBGGrexgfGMUt9z3R7-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8_HBGGrexgfGMUt9z3R7-1" target="8_HBGGrexgfGMUt9z3R7-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8_HBGGrexgfGMUt9z3R7-1" value="&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;mT5&lt;/font&gt;&lt;br&gt;Multilingual T5 model trained on tasks in 101 languages&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="110" y="210" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="8_HBGGrexgfGMUt9z3R7-2" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 19px;&quot;&gt;North-T5&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Norwegian and English T5 variant&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="210" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="8_HBGGrexgfGMUt9z3R7-5" value="&lt;b&gt;Data:&lt;br&gt;&lt;/b&gt;NCC&lt;br&gt;Wikipedia&lt;br&gt;CC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8_HBGGrexgfGMUt9z3R7-6" value="&lt;b&gt;Objectives:&lt;/b&gt;&lt;br&gt;MLM&lt;br&gt;CLM" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8_HBGGrexgfGMUt9z3R7-9" value="&lt;b&gt;Data:&lt;br&gt;&lt;/b&gt;SNL&lt;br&gt;&amp;nbsp;or CNN/DM" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8_HBGGrexgfGMUt9z3R7-10" value="&lt;b&gt;Objective:&lt;/b&gt;&lt;br&gt;CLM for abstracive summarisation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="210" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8_HBGGrexgfGMUt9z3R7-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="8_HBGGrexgfGMUt9z3R7-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="265" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8_HBGGrexgfGMUt9z3R7-15" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 19px;&quot;&gt;Fine-tuned summarisation models&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="690" y="210" width="160" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
