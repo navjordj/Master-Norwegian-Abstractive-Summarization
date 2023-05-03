@@ -9,6 +9,9 @@ Frank Bridge var en britisk komponist og bratsjist som regnes som en av sin tids
  Summary
 John Bridge var en britisk komponist og dirigent.
 Han var en av de ledende komponistene i Storbritannia og Nord-Irland på 1900-tallet.
+====== 
+ Rouge1
+31.1688
 ===========================
 ====== 
  Article
@@ -20,6 +23,9 @@ Bakke kloster er et tidligere nonnekloster i Trondheim. Det lå på østsiden av
  Summary
 Bakke kloster er et kloster i Bakke kommune i Vestfold og Telemark fylke.
 Klosteret ligger på østsiden av Bakkefjorden.
+====== 
+ Rouge1
+45.0
 ===========================
 ====== 
  Article
@@ -31,6 +37,9 @@ Andre grupper av årevinger som for eksempel darwinvepser og plantevepser er min
  Summary
 Årevinger er en gruppe insekter i ordenen veps.
 De omfatter rovdyr, pollenspisere, honningsugere, gallvepser og snyltevepser.
+====== 
+ Rouge1
+38.0952
 ===========================
 ====== 
  Article
@@ -41,6 +50,9 @@ Durativ, aksjonsart som betegner varighet. Om en kategori, typisk et verb, som b
 ====== 
  Summary
 Durative verb er et verb som brukes i aksjonsart for å si noe om hvor lenge eller om hendelsen har en slutt.
+====== 
+ Rouge1
+29.2683
 ===========================
 ====== 
  Article
@@ -52,4 +64,7 @@ Borgerlig begravelse er en tradisjonell betegnelse på gravferd som foregår ute
  Summary
 Borgerlig begravelse er en seremoni for personer som ikke er medlem av en kirke eller en folkekirke.
 I Norge brukes betegnelsen «borgerlig bisettelse» og «humanistisk begravelse» som en uformell samlebetegnelse for ikke-religiøse gravferdsseremonier i regi av Human-Etisk Forbund eller Humanistene (tidligere Humanistforbundet).
+====== 
+ Rouge1
+36.9565
 ===========================

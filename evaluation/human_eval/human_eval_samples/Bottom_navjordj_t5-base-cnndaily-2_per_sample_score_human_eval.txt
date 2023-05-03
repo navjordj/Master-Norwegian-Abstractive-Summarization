@@ -10,6 +10,9 @@ Model: Bottom_navjordj_t5-base-cnndaily-2_per_sample_score
 Ca 160 mennesker ble arrestert i Buraida for ulovlig protester utenfor byens Bureau of Investigation and Aktoration.
 Demonstranter har gjentatte ganger samlet seg for å kreve at de fengslede slektningene de sier har vært holdt fengslet i årevis uten å ha blitt tiltalt, prøvd eller gitt adgang til advokater.
 Amnesty International kritiserer arrestasjonene.
+====== 
+ Rouge1
+20.0
 ===========================
 ====== 
  Article
@@ -22,6 +25,9 @@ Amnesty International kritiserer arrestasjonene.
 Jamie Benefit skrev et brev med støtte og oppmuntring til å strekke seg ut til troppene under Gulfkrigen.
 Benefit sier at hun ønsker å minne meg selv om at kjærligheten virkelig eksisterer.
 Hun sier at det er en høy, eksistensiell orden, men likevel gyldig.
+====== 
+ Rouge1
+14.0
 ===========================
 ====== 
  Article
@@ -35,6 +41,9 @@ Båter mellom Stockholm og Helsingfors tilbyr gledene av et luksuscruiseskip til
 Viking og Silja forbinder hovedstedene i Sverige og Finland.
 Begge linjene tilbyr topp moderne skip med luksuriøse måltider, rimelige lugarer, rikelig med underholdning og nok pliktfrie godsaker til å senke et skip.
 Hver linje har en eldre, mindre luksuriøs flåte, men cateringer bedre til lavbudsjettreisende, tilbyr rabatter til studenter, seniorer og skinnepass-holdere.
+====== 
+ Rouge1
+1.9802
 ===========================
 ====== 
  Article
@@ -47,6 +56,9 @@ Hver linje har en eldre, mindre luksuriøs flåte, men cateringer bedre til lavb
 Utfordringen ble sendt for nesten to uker siden på Comedy Central's - Natten med for mange stjerner, - en innsamling for autismeprogrammer.
 En tweet fra sportscasteren Fred Katz utfordretTodayshowet Willie Geist og Uzo Aduba for å dele enLady og Landstrykeren lakris.
 Det høres ut som en god avtale for folka på Twizzlers.
+====== 
+ Rouge1
+0.0
 ===========================
 ====== 
  Article
@@ -58,4 +70,7 @@ Det høres ut som en god avtale for folka på Twizzlers.
  Summary
 Lonely Planets Europa-liste inkluderer de neste hotspots å besøke og mangeårige favoritter med noe nytt å nyte.
 Paris og Roma er vakre på denne tiden av året, men de er også fulle av sommerreisende.
+====== 
+ Rouge1
+4.8193
 ===========================

@@ -9,6 +9,9 @@ Frank Bridge var en britisk komponist og bratsjist som regnes som en av sin tids
  Summary
 William Bridge var en britisk komponist, fiolinist og dirigent.
 Han regnes som en av de betydeligste britiske strykekvartettene på 1900-tallet.
+====== 
+ Rouge1
+29.3333
 ===========================
 ====== 
  Article
@@ -20,6 +23,9 @@ Bakke kloster er et tidligere nonnekloster i Trondheim. Det lå på østsiden av
  Summary
 Bakke kloster var et benediktinerkloster på Bakklandet i Asker kommune, Viken fylke.
 Klosteret ble grunnlagt i 1100.
+====== 
+ Rouge1
+31.5789
 ===========================
 ====== 
  Article
@@ -31,6 +37,9 @@ Andre grupper av årevinger som for eksempel darwinvepser og plantevepser er min
  Summary
 Årevinger er en orden av insekter i ordenen veps.
 De omfatter bier, humler, stilkveps, broddvepser og snyltevepser.
+====== 
+ Rouge1
+37.2093
 ===========================
 ====== 
  Article
@@ -41,6 +50,9 @@ Durativ, aksjonsart som betegner varighet. Om en kategori, typisk et verb, som b
 ====== 
  Summary
 Durativ er en aksjonsart som brukes om en handling som varer lenge, for eksempel banke på døra.
+====== 
+ Rouge1
+42.1053
 ===========================
 ====== 
  Article
@@ -51,4 +63,7 @@ Borgerlig begravelse er en tradisjonell betegnelse på gravferd som foregår ute
 ====== 
  Summary
 Borgerlig begravelse er en ikke-religiøs gravferdsseremoni for personer som ikke er medlem av kirken eller den danske folkekirken.
+====== 
+ Rouge1
+32.8358
 ===========================

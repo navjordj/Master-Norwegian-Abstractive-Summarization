@@ -11,6 +11,9 @@ Denne siden inkluderer serien Transcript.
 Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
 Nederst på siden kommenterer man for en sjanse til å bli nevnt på CNN Student News.
 Du må være lærer eller elev i alderen 13 år eller eldre for å be om en omtale på en CNN Student News Roll Call.
+====== 
+ Rouge1
+99.115
 ===========================
 ====== 
  Article
@@ -23,6 +26,9 @@ Du må være lærer eller elev i alderen 13 år eller eldre for å be om en omta
 Daglig transkripsjon er en skriftlig versjon av hver dags CNN Student News-program.
 Bruk denne utskriften til å hjelpe elever med å forstå og forstå ordforrådet.
 Bruk ukeavisen til å teste din kunnskap om historier du så på CNN Student News.
+====== 
+ Rouge1
+100.0
 ===========================
 ====== 
  Article
@@ -36,6 +42,9 @@ Denne siden inkluderer serien Transcript.
 Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
 Nederst på siden kommenterer man for en sjanse til å bli nevnt på CNN Student News.
 Du må være lærer eller elev i alderen 13 år eller eldre for å be om en omtale på en CNN Student News Roll Call.
+====== 
+ Rouge1
+99.115
 ===========================
 ====== 
  Article
@@ -49,6 +58,9 @@ Denne siden inkluderer serien Transcript, Daily Curriculum og Maps.
 Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
 Dagsavisens Curriculum tilbyr Medielitteratur Dagens spørsmål, nøkkelkonsepter, raske fakta og diskusjonsspørsmål.
 Nederst på siden kan du dele din tilbakemelding om serien og pensumet vårt.
+====== 
+ Rouge1
+100.0
 ===========================
 ====== 
  Article
@@ -61,4 +73,7 @@ Nederst på siden kan du dele din tilbakemelding om serien og pensumet vårt.
 Daglig transkripsjon er en skriftlig versjon av hver dags CNN Student News-program.
 Bruk denne utskriften til å hjelpe elever med å forstå og forstå ordforrådet.
 Bruk ukeavisen til å teste din kunnskap om historier du så på CNN Student News.
+====== 
+ Rouge1
+100.0
 ===========================

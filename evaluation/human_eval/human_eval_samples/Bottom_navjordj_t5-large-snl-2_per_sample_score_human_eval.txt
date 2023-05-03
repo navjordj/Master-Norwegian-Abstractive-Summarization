@@ -9,6 +9,9 @@ Alliance Internationale de Tourisme, verdensomfattende reiselivsorganisasjon med
  Summary
 ACI er en internasjonal organisasjon for reiselivs- og motororganisasjoner.
 Organisasjonen ble grunnlagt i 1898.
+====== 
+ Rouge1
+8.0
 ===========================
 ====== 
  Article
@@ -21,6 +24,9 @@ Brakteater var mynter med preg bare på den ene siden. Blanketten på brakteater
 Brakteater er en middelaldermynt som er preget med en liten billedflate til rådighet.
 Myntene er ofte enkle og enkle i utformingen, men har ofte et enkelt motiv på mynten.
 De norske brakteatmyntene ble preget i Norge fra begynnelsen av 1100-tallet til slutten av 1300-tallet.
+====== 
+ Rouge1
+8.3333
 ===========================
 ====== 
  Article
@@ -32,6 +38,9 @@ I likhet med de fleste andre latinamerikanske land har Colombia siden 1989 liber
  Summary
 Colombia er verdens nest største kaffeprodusent, etter Brasil.
 Bruttonasjonalproduktet (BNP) vokste i perioden 1994–2002 med 1,6 % i faste priser.
+====== 
+ Rouge1
+7.4074
 ===========================
 ====== 
  Article
@@ -42,6 +51,9 @@ Dansk kunsthistorie regnes fra steinalderens rissebilder og dekorerte keramikk t
 ====== 
  Summary
 Danmark har hatt en rik kulturhistorie i eldre steinalder, bronsealder, jernalder og romertid.
+====== 
+ Rouge1
+8.8889
 ===========================
 ====== 
  Article
@@ -52,4 +64,7 @@ Chicagoskolen er den sosiologiske forskningsvirksomheten som foregikk ved Univer
 ====== 
  Summary
 «Skolen» var en retning innen sosiologien som ble utviklet i USA i 1930-årene, blant annet gjennom William I. Thomas og Florian Znaniecki.
+====== 
+ Rouge1
+10.0
 ===========================

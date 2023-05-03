@@ -9,6 +9,9 @@ Model: Top_navjordj_t5-base-cnndaily-2_per_sample_score
  Summary
 Denne siden inkluderer serien Transcript og et sted du kan be om å bli nevnt på CNN Student News Roll Call.
 Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
+====== 
+ Rouge1
+62.069
 ===========================
 ====== 
  Article
@@ -20,6 +23,9 @@ Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
  Summary
 Denne utskriften er en skriftlig versjon av hver dags CNN Student News-program.
 Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
+====== 
+ Rouge1
+63.4921
 ===========================
 ====== 
  Article
@@ -32,6 +38,9 @@ Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
 Denne siden inkluderer serien Transcript og et sted du kan be om å bli nevnt på CNN Student News Roll Call.
 Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
 Du må være lærer eller elev 13 år eller eldre for å be om at du blir nevnt.
+====== 
+ Rouge1
+73.5849
 ===========================
 ====== 
  Article
@@ -44,6 +53,9 @@ Du må være lærer eller elev 13 år eller eldre for å be om at du blir nevnt.
 Denne siden inkluderer serien Transcript, Daily Curriculum, Maps som omhandler dagens show.
 Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
 Trykk her for å få tilgang til utskriften av CNN Student News-programmet.
+====== 
+ Rouge1
+47.0588
 ===========================
 ====== 
  Article
@@ -55,4 +67,7 @@ Trykk her for å få tilgang til utskriften av CNN Student News-programmet.
  Summary
 Denne utskriften er en skriftlig versjon av hver dags CNN Student News-program.
 Bruk Transkripsjonen til å hjelpe elever med leseforståelse og ordforråd.
+====== 
+ Rouge1
+63.4921
 ===========================

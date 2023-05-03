@@ -10,6 +10,9 @@ Alliance Internationale de Tourisme, verdensomfattende reiselivsorganisasjon med
 AIT er en internasjonal organisasjon for reiselivs- og motororganisasjoner.
 Organisasjonen ble stiftet i 1898 som en ideell, ikke-statlig organisasjon som representerer interessene til nasjonale foreninger og forbund.
 AIT har konsultativ status ved FN siden 1947.
+====== 
+ Rouge1
+4.2553
 ===========================
 ====== 
  Article
@@ -21,6 +24,9 @@ Brakteater var mynter med preg bare på den ene siden. Blanketten på brakteater
  Summary
 Brakteat er en myntform som ble preget i Norge fra 1100-tallet til slutten av 1500-tallet.
 I Norge var brakteat den dominerende myntformen i nordisk middelalder.
+====== 
+ Rouge1
+11.5385
 ===========================
 ====== 
  Article
@@ -37,6 +43,9 @@ BNP per innb.
 var i 2003 anslått til ca.
 6300 USD.
 Den svarte økonomien vokste i omfang i de senere år, spesielt den illegale handelen med marihuana og kokain.
+====== 
+ Rouge1
+22.7642
 ===========================
 ====== 
  Article
@@ -48,6 +57,9 @@ Dansk kunsthistorie regnes fra steinalderens rissebilder og dekorerte keramikk t
  Summary
 Danmarks kunst er preget av sterke kulturkontakter med sørlige og sørvestlige områder.
 I dette tidsrommet utvikles støpekunsten basert på bronse, jern og bølgebånd.
+====== 
+ Rouge1
+19.6721
 ===========================
 ====== 
  Article
@@ -58,4 +70,7 @@ Chicagoskolen er den sosiologiske forskningsvirksomheten som foregikk ved Univer
 ====== 
  Summary
 Sosialpsykologi er en retning i sosiologien som ble utviklet i 1920-årene, og som i senere år fikk betydning for utviklingen av sosialpsykologien i Norge.
+====== 
+ Rouge1
+14.2857
 ===========================

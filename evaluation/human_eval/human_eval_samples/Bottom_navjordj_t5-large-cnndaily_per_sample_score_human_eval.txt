@@ -10,6 +10,9 @@ Model: Bottom_navjordj_t5-large-cnndaily_per_sample_score
 En talsmann for Qassim-politiet sier at 15 kvinner og 6 barn var blant dem som ble tatt inn.
 Demonstranter ble arrestert etter at offiserer på stedet ikke hadde klart å overbevise dem om å avslutte demonstrasjonen.
 Demonstranter har gjentatte ganger samlet seg for å kreve at de fengslede slektningene deres blir løslatt.
+====== 
+ Rouge1
+2.5641
 ===========================
 ====== 
  Article
@@ -21,6 +24,9 @@ Demonstranter har gjentatte ganger samlet seg for å kreve at de fengslede slekt
  Summary
 Jamie Benefit skrev et brev med støtte og oppmuntring til troppene under Gulfkrigen.
 Hun bestemte seg for å strekke seg ut til troppene under krigen.
+====== 
+ Rouge1
+5.0
 ===========================
 ====== 
  Article
@@ -34,6 +40,9 @@ Båter mellom Stockholm og Helsingfors tilbyr gledene av et luksuscruiseskip til
 Båtene er store -- på 56 000 tonn, nesten 200 meter lange -- og med 2700 senger er de de største (og billigste) luksushotellene i Skandinavia.
 Viking har ry som festbåten.
 Silja regnes som mer elegant, men har likevel sin andel av tidvis irriterende og støyende passasjerer.
+====== 
+ Rouge1
+2.1277
 ===========================
 ====== 
  Article
@@ -46,6 +55,9 @@ Silja regnes som mer elegant, men har likevel sin andel av tidvis irriterende og
 TwizzlerChallenge utfordrer folk til å lage en video og utfordre andre til å gjøre det samme for en god sak.
 Utfordringen ble sendt for nesten to uker siden på Comedy Central's - Natten med for mange stjerner - en innsamling for autismeprogrammer.
 Pengene går til New York-samarbeidet for autisme, som finansierer og skaper skoler, programmer og tjenester for mennesker med autisme på landsbasis.
+====== 
+ Rouge1
+2.5
 ===========================
 ====== 
  Article
@@ -58,4 +70,7 @@ Pengene går til New York-samarbeidet for autisme, som finansierer og skaper sko
 Årets Europa-liste inkluderer de neste hotspots å besøke og mangeårige favoritter med noe nytt å nyte.
 Porto & Dourodalen i Portugal har en blomstrende kunstscene og et stadig mer kulinarisk ry.
 Budapest begynner å stjele kulen fra Berlin akkurat nå, sier Murdock.
+====== 
+ Rouge1
+4.4944
 ===========================

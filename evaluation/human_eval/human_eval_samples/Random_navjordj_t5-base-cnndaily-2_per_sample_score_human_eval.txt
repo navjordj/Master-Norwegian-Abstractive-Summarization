@@ -12,6 +12,9 @@ Han ble arrestert rundt kl.
 7 i dag av offiserer fra West Midlands Counter Terrorism Unit.
 En talsmann for styrken sa: \"Operasjonen var planlagt og etterretningen ledet.
 Det var ingen umiddelbar trussel mot offentlig sikkerhet.\"
+====== 
+ Rouge1
+42.5926
 ===========================
 ====== 
  Article
@@ -25,6 +28,9 @@ Bahamas påberopte seg en olympisk medalje i friidrett og felt.
 Ramon Miller løp en inspirert siste etappe til sammenlagt America's Angelo Taylor.
 Trinidad og Tobago klarte å ta bronsen ettersom de bare kunne fullføre på åttendeplass.
 USAs kvinner klarte seg bedre i sprintstafetten tidligere på kvelden og tok gullmedaljen i 4x100m for første gang siden Atlanta-lekene i 1996.
+====== 
+ Rouge1
+23.7624
 ===========================
 ====== 
  Article
@@ -37,6 +43,9 @@ USAs kvinner klarte seg bedre i sprintstafetten tidligere på kvelden og tok gul
 Den britiske utdanningssekretæren Michael Gove beklager seg til en avis i forrige uke.
 Han sier at engelsk har vært stolte av at vi ikke snakker fremmede språk, og vi må bare snakke høyere på engelsk.
 Men hvor mye vil slike tiltak være til gagn for engelsktalende, gitt deres språkdominans?
+====== 
+ Rouge1
+23.6559
 ===========================
 ====== 
  Article
@@ -49,6 +58,9 @@ Men hvor mye vil slike tiltak være til gagn for engelsktalende, gitt deres spr�
 Coca Cola ble født i Atlanta, Georgia den 8. mai 1886.
 Dr. John Stith Pemberton produserte sirupen til Coca-Cola.
 Selskapet gikk inn i Kina i 1927 og sitt 100. land Sierra Leone i 1957.
+====== 
+ Rouge1
+34.7826
 ===========================
 ====== 
  Article
@@ -60,4 +72,7 @@ Selskapet gikk inn i Kina i 1927 og sitt 100. land Sierra Leone i 1957.
  Summary
 ISAF bekrefter at helikopteret gikk ned, men sier at årsaken til ulykken var ukjent.
 Det var ingen Anmeldelse om Opprørervirksomhet i Området.
+====== 
+ Rouge1
+27.5862
 ===========================

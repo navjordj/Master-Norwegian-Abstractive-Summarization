@@ -14,16 +14,18 @@ def print_to_file(print_str, file):
     print(print_str, file=file)
 
 
-def print_article_summary(name, articles, summaries, labels):
+def print_article_summary(name, articles, summaries, labels, rouge1):
     with open(f"{name}_human_eval.txt", "w", encoding="utf-8") as f:
         print_to_file(f"Model: {name}", f)
-        for article, summary, label in zip(articles, summaries, labels):
+        for article, summary, label, r1 in zip(articles, summaries, labels, rouge1):
             print_to_file("====== \n Article", f)
             print_to_file(article, f)
             print_to_file("====== \n label", f)
             print_to_file(label, f)
             print_to_file("====== \n Summary", f)
             print_to_file(summary, f)
+            print_to_file("====== \n Rouge1", f)
+            print_to_file(r1, f)
             print_to_file("===========================", f)
 
 
@@ -66,25 +68,39 @@ def process_csv(csv_file, article, labels):
     bottom_n = df[df.index.isin(bottom_indices)]
 
     print(csv_file)
+    print("=====================================")
+    print("RANDOM R1 Mean:")
+    print(random_n["rouge1"].mean())
+    print("=====================================")
+    print("Top R1 Mean:")
+    print(top_n["rouge1"].mean())
+    print("=====================================")
+    print("Bottom R1 Mean:")
+    print(bottom_n["rouge1"].mean())
 
     print_article_summary(
         f"Random_{csv_file.split('/')[1].rstrip('.csv')}",
         random_n["article"].values,
         random_n["summary"].values,
-        random_n["labels"].values
+        random_n["labels"].values,
+        random_n["rouge1"].values
     )
+    
+
     print_article_summary(
         f"Top_{csv_file.split('/')[1].rstrip('.csv')}",
         top_n["article"].values,
         top_n["summary"].values,
-        top_n["labels"].values
+        top_n["labels"].values,
+        top_n["rouge1"].values
     )
 
     print_article_summary(
         f"Bottom_{csv_file.split('/')[1].rstrip('.csv')}",
         bottom_n["article"].values,
         bottom_n["summary"].values,
-        bottom_n["labels"].values
+        bottom_n["labels"].values,
+        bottom_n["rouge1"].values
     )
 
 

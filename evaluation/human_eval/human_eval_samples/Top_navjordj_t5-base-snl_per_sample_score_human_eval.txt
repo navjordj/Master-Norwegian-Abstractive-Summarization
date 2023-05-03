@@ -9,6 +9,9 @@ Borgar er eit mannsnamn som går tilbake til det norrøne Borg-arr. I dette tole
  Summary
 Borgar er eit mannsnamn som går tilbake til det norrøne Borgarr.
 I dette toledda namnet tyder forleddet ‘strid’ og etterleddet’ ‘gud’.
+====== 
+ Rouge1
+83.3333
 ===========================
 ====== 
  Article
@@ -20,6 +23,9 @@ Brynhild er eit kvinnenamn som går tilbake til det norrøne Bryn-hildr. I dette
  Summary
 Brynhild er eit kvinnenamn som går tilbake til det norrøne Bryn-hildr.
 I dette toledda namnet tyder forleddet ‘gud’.
+====== 
+ Rouge1
+88.8889
 ===========================
 ====== 
  Article
@@ -32,6 +38,9 @@ Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert 
 Dette er en datoartikkel.
 Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
 Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.
+====== 
+ Rouge1
+100.0
 ===========================
 ====== 
  Article
@@ -44,6 +53,9 @@ Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert 
 Dette er en datoartikkel.
 Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
 Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.
+====== 
+ Rouge1
+100.0
 ===========================
 ====== 
  Article
@@ -56,4 +68,7 @@ Dette er en datoartikkel. Disse ble publisert i 2009 og er ikke blitt oppdatert 
 Dette er en datoartikkel.
 Disse ble publisert i 2009 og er ikke blitt oppdatert etterpå.
 Redaksjonen i Store norske leksikon har ikke bestemt oss for om vi skal beholde disse artiklene, men lar dem ligge ute enn så lenge.
+====== 
+ Rouge1
+100.0
 ===========================

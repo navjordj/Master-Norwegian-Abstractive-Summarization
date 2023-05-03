@@ -11,6 +11,9 @@ West Midland Police har sagt at tenåringen, fra Hodge Hill-området i Birmingha
 7 i dag av offiserer fra West Midlands Counter Terrorism Unit.
 Mannen ble arrestert på hjemmeadressen sin på mistanke om forberedelse til terrorhandlinger, i strid med terrorlovens § 5 2006.
 Den kommer dagen etter at tre britiske tenåringsjihadister ble arrestert i Tyrkia.
+====== 
+ Rouge1
+60.5505
 ===========================
 ====== 
  Article
@@ -24,6 +27,9 @@ Bahamas påberoper seg en olympisk medalje i friidrett og felt.
 Ramon Miller løp en inspirert siste etappe til sammenlagt America's Angelo Taylor.
 Asli Cakir Alptekin vant Tyrkias første noensinne gullmedalje på 1500m.
 Frankrikes Renaud Lavillenie tok gull i mennenes stavsprangfinale.
+====== 
+ Rouge1
+29.2683
 ===========================
 ====== 
  Article
@@ -36,6 +42,9 @@ Frankrikes Renaud Lavillenie tok gull i mennenes stavsprangfinale.
 Etter hvert som engelsk har sementert sin posisjon som standardspråk for global virksomhet, har anglofonisk interesse for fremmede språk stadig avtatt.
 Men hvor mye vil slike tiltak være til gagn for engelsktalende, gitt deres språkdominans?
 Spørsmålet er: Er det fornuftig å bruke tid på å tilegne seg et nytt språk når verden lærer ditt språk?
+====== 
+ Rouge1
+35.6436
 ===========================
 ====== 
  Article
@@ -48,6 +57,9 @@ Spørsmålet er: Er det fornuftig å bruke tid på å tilegne seg et nytt språk
 Coca-Cola ble født i Atlanta, Georgia den 8. mai 1886.
 Dr. John Stith Pemberton, en lokal apoteker, produserte sirupen til Coca-Cola.
 I dag er The Coca-Cola Company verdens største drikkevareselskap med det mest omfattende distribusjonssystemet i verden.
+====== 
+ Rouge1
+45.3333
 ===========================
 ====== 
  Article
@@ -60,4 +72,7 @@ I dag er The Coca-Cola Company verdens største drikkevareselskap med det mest o
 ISAF bekrefter at helikopteret gikk ned, men sier at årsaken til ulykken er ukjent.
 Kabul-politiet sier at fem lik ble trukket fra vraket og de ble identifisert som tyrkiske borgere.
 Det var ingen umiddelbare rapporter om sivile tap.
+====== 
+ Rouge1
+46.5753
 ===========================
