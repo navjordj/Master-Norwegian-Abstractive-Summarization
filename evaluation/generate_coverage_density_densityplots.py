@@ -32,7 +32,7 @@ def main(
 
     # Create a figure and define the subplots
     fig, axes = plt.subplots(num_rows, n_cols, figsize=(
-        6*n_cols, 6 * num_rows), sharex=False, sharey=True)
+        6*n_cols, 6 * num_rows), sharex=True, sharey=True)
     axes = axes.flatten()  # Flatten axes to make it easier to iterate
 
     # Get the global min and max compression values for the color map
@@ -48,7 +48,7 @@ def main(
 
     # Create a color map
     cmap = plt.get_cmap(colormap)
-    norm = plt.Normalize(vmin=min_compression, vmax=max_compression)
+    #norm = plt.Normalize(vmin=min_compression, vmax=max_compression)
 
     # Loop through the filepaths and create subplots
     for idx, filepath in enumerate(filepaths):
@@ -61,16 +61,16 @@ def main(
             x='density',
             y='coverage',
             ax=axes[idx],
-            fill=True,
+            fill=False,
             cmap=colormap,
             # rug="True",
             # kind="kde"
-            bw_adjust=0.1,
+            bw_adjust=0.5,
             levels=100,
-            thresh=0.05,
+            thresh=0.01,
             common_norm=True,
             # Add this line to clip the y-axis range
-            # clip=((None, None), (-0.1, 1)),
+            clip=((None, None), (0, 1)),
             cut=0,
         )
 
@@ -99,7 +99,7 @@ def main(
         if "SNL" in descriptive_name:
             plot_name += "SNL"
         if "cnn_daily_mail" in descriptive_name:
-            plot_name += "CNN Daily Mail"
+            plot_name += "CNN/DM"
         if "highlights" in descriptive_name:
             plot_name += " highlights-article"
         if "ingress" in descriptive_name:
@@ -130,7 +130,7 @@ def main(
             axes[idx].set_ylim(coverage_lower_lim, 1)
 
         # Add the following line to set the y-axis ticks explicitly
-    axes[idx].set_yticks(np.arange(0, 1.1, 0.1))
+        axes[idx].set_yticks(np.arange(0, 1.1, 0.1))
 
     # Remove empty subplots
     for idx in range(len(filepaths), len(axes)):
@@ -147,6 +147,8 @@ def main(
     # Set the title for the figure
     fig_title = f'Norm. Bivar. Density Plots Coverage and Density {" ".join(x[0].upper() + x[1:] for x in name_plot.split("_")[:-1])}'
     fig_title = fig_title.replace("Cnn", "CNN Daily Mail")
+    fig_title = fig_title.replace("cnn", "CNN Daily Mail")
+    fig_title = fig_title.replace("CNN", "CNN Daily Mail")
     fig_title = fig_title.replace("Snl", "SNL")
     fig_title = fig_title.replace(colormap, "")
     wrapped_title = textwrap.fill(fig_title, width=60)
@@ -172,8 +174,8 @@ if __name__ == '__main__':
     ]
 
     filepaths_test_pred = [
-        'matches_pred_test/test/cnn_daily_mail_nor_final_test_highlights_matches.csv',
-        'matches_pred_test/test/SNL_summarization_test_ingress_matches.csv',
+        #'matches_pred_test/test/cnn_daily_mail_nor_final_test_highlights_matches.csv',
+        #'matches_pred_test/test/SNL_summarization_test_ingress_matches.csv',
         'matches_pred_test/test/cnn_daily_mail_nor_final_test_base_matches.csv',
         'matches_pred_test/test/SNL_summarization_test_base_matches.csv',
         'matches_pred_test/test/cnn_daily_mail_nor_final_test_large_matches.csv',
@@ -181,22 +183,27 @@ if __name__ == '__main__':
     ]
 
     filepaths_test_pred_snl = [
-        'matches_pred_test/test/SNL_summarization_test_ingress_matches.csv',
+        #'matches_pred_test/test/SNL_summarization_test_ingress_matches.csv',
         'matches_pred_test/test/SNL_summarization_test_base_matches.csv',
         'matches_pred_test/test/SNL_summarization_test_large_matches.csv',
     ]
 
     filepaths_test_pred_cnn = [
-        'matches_pred_test/test/cnn_daily_mail_nor_final_test_highlights_matches.csv',
+        #'matches_pred_test/test/cnn_daily_mail_nor_final_test_highlights_matches.csv',
         'matches_pred_test/test/cnn_daily_mail_nor_final_test_base_matches.csv',
         'matches_pred_test/test/cnn_daily_mail_nor_final_test_large_matches.csv',
+    ]
+
+    file_paths_train = [
+        'matches_pred_test/train/cnn_daily_mail_nor_final_train_highlights_matches.csv',
+        'matches_pred_test/train/SNL_summarization_train_ingress_matches.csv',
     ]
 
     # Color maps: https://matplotlib.org/stable/tutorials/colors/colormaps.html
     colormap = "coolwarm"
 
     # Main function calls to create figures
-
+    """
     main(
         filepaths=filepaths_test_pred_snl,
         name_plot=f"densityplot_test_pred_snl_{colormap}",
@@ -209,25 +216,41 @@ if __name__ == '__main__':
     main(
         filepaths=filepaths_test_pred_cnn,
         name_plot=f"densityplot_test_pred_cnn_{colormap}",
-        # density_upper_lim=80,
+        density_upper_lim=80,
         legend_location='lower right',
         # coverage_lower_lim=0.2,
         n_cols=1,
         colormap=colormap,
     )
-
+    """
     main(
         filepaths=filepaths_test_pred,
         name_plot=f"densityplot_test_pred_SNL_and_CNN_{colormap}",
         density_upper_lim=None,
         legend_location='lower right',
         colormap=colormap,
+        n_cols=2,
     )
 
-    """main(
+    main(
+        filepaths=file_paths_train,
+        name_plot=f"densityplot_train_SNL_and_CNN_{colormap}",
+        density_upper_lim=None,
+        legend_location='lower right',
+        colormap=colormap,
+        n_cols=2,
+    )
+
+
+    
+
+    """
+
+    main(
         filepaths=filepaths_val_train,
         name_plot=f"densityplot_validation_train_SNL_and_CNN_{colormap}",
         # density_upper_lim=10,
         legend_location='lower right',
         colormap=colormap,
-    )"""
+    )
+    """
