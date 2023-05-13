@@ -29,16 +29,19 @@ max_length = parsed_yaml['max_length']
 
 # Add max_length to all configs and create a list of dictionaries
 config_dicts = []
-print(parsed_yaml)
+#print(parsed_yaml)
 for key, value in parsed_yaml['configs'].items():
     config_dict = {'name': key}
     
-    # Handle cases where no parameters are given
-    if value is not None:
-        config = value[0]
-    else:
-        config = {}
-    
+    # TODO: Skriv om
+    config = {}
+    if value:
+        for spec in value:
+            print(spec)
+            key, val = spec.popitem()
+            config[key] = val
+
+
     config['max_length'] = max_length
 
     if "batch_size" not in config:
@@ -52,14 +55,20 @@ for key, value in parsed_yaml['configs'].items():
 print("Configurations:")
 pprint(config_dicts)
 
+def add_prefix(example):
+    example['article'] = 'oppsummer: ' + example['article']
+    return example
+
 validation_set = load_dataset(validation_set_name, split="validation")
 validation_set = validation_set.select(list(range(n_samples))) if n_samples else validation_set
+validation_set = validation_set.map(add_prefix)
+
 print(validation_set)
 
 
 metric = evaluate.load("rouge")
 
-model = T5ForConditionalGeneration.from_pretrained(model_name)
+model = T5ForConditionalGeneration.from_pretrained(model_name, )
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 task_evaluator = evaluator("summarization")
@@ -81,3 +90,17 @@ for config in tqdm.tqdm(config_dicts):
     results_df = results_df.append({"config": config, **results}, ignore_index=True)
 
 results_df.to_csv(rf"{validation_set_name}_{model_name}_results.csv".replace("/", "_"))
+
+if parsed_yaml.get('stop_instance', None):
+
+    import os
+
+    instance_id = os.environ["CONTAINER_ID"].split(".")[1]
+
+    vast_api_key = ""
+
+    if vast_api_key != None:
+        print("destroying instance")
+        os.system(f"./vast stop instance {instance_id} --api-key {vast_api_key}")
+else:
+    print("not destroying instance")

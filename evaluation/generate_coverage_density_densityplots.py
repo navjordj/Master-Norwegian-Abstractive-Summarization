@@ -55,7 +55,8 @@ def main(
         # Read the CSV
         data = pd.read_csv(filepath)
 
-        # Create a density plot using seaborn kdeplot
+        print(data["density"].min(), data["density"].max())
+
         sns.kdeplot(
             data=data,
             x='density',
@@ -74,32 +75,25 @@ def main(
             cut=0,
         )
 
-        # Compute the mean compression, mean match ratio and mean number of sentences
-        mean_compression = np.mean(data['compression'])
-        match_ratio = data['matches'] / data['n_sentences']
-        mean_match_ratio = np.mean(match_ratio)
-        mean_n_sentences = np.mean(data['n_sentences'])
 
-        # Create a single legend with all mean values
-        legend_elements = [
-            mpatches.Patch(
-                color='white', label=f'Compression: {mean_compression:.2f}', edgecolor='black'),
-            mpatches.Patch(
-                color='white', label=f'Match Ratio: {mean_match_ratio:.2f}', edgecolor='black'),
-            mpatches.Patch(
-                color='white', label=f'# Sentences: {mean_n_sentences:.2f}', edgecolor='black')
-        ]
-        axes[idx].legend(handles=legend_elements,
-                         title='Mean Values', loc=legend_location)
 
         # Extract the descriptive name from the filepath
         descriptive_name = os.path.splitext(os.path.basename(filepath))[0]
         plot_name = ""
         # Set subplot title
+
+
         if "SNL" in descriptive_name:
-            plot_name += "SNL"
+            plot_name += "SNL - "
         if "cnn_daily_mail" in descriptive_name:
-            plot_name += "CNN/DM"
+            plot_name += "CNN/DM - "
+
+        if "base" in descriptive_name:
+            plot_name += "Base"
+        if "large" in descriptive_name:
+            plot_name += "Large"
+
+        """
         if "highlights" in descriptive_name:
             plot_name += " highlights-article"
         if "ingress" in descriptive_name:
@@ -108,16 +102,13 @@ def main(
             plot_name += " predicted-article"
         if "test" in descriptive_name:
             plot_name += " test"
-        if "base" in descriptive_name:
-            plot_name += " base"
-        if "large" in descriptive_name:
-            plot_name += " large"
         if "validation" in descriptive_name:
             plot_name += " validation"
         if "train" in descriptive_name:
             plot_name += " train"
-        subplot_title = " ".join(x[0].upper() + x[1:]
-                                 for x in plot_name.split(" "))
+        """
+        subplot_title = plot_name
+
         axes[idx].set_title(
             subplot_title, fontsize=12)  # , fontweight='bold')
 
@@ -145,11 +136,7 @@ def main(
     if "densityplot_" in name_plot:
         name_plot = name_plot.replace("densityplot_", "")
     # Set the title for the figure
-    fig_title = f'Norm. Bivar. Density Plots Coverage and Density {" ".join(x[0].upper() + x[1:] for x in name_plot.split("_")[:-1])}'
-    fig_title = fig_title.replace("Cnn", "CNN Daily Mail")
-    fig_title = fig_title.replace("cnn", "CNN Daily Mail")
-    fig_title = fig_title.replace("CNN", "CNN Daily Mail")
-    fig_title = fig_title.replace("Snl", "SNL")
+    fig_title = f'KDE Plots of Coverage and Density for models trained on SNL and CNN/DM'
     fig_title = fig_title.replace(colormap, "")
     wrapped_title = textwrap.fill(fig_title, width=60)
     fig.suptitle(fig_title, fontsize=13)

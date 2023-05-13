@@ -61,8 +61,15 @@ for key, value in parsed_yaml['configs'].items():
 print("Configurations:")
 pprint(config_dicts)
 
+def add_prefix(example):
+    example['article'] = 'oppsummer: ' + example['article']
+    return example
+
+
 validation_set = load_dataset(validation_set_name, split="validation")
 validation_set = validation_set.select(list(range(n_samples))) if n_samples else validation_set
+validation_set = validation_set.map(add_prefix)
+
 print(validation_set)
 
 
