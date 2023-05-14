@@ -7,7 +7,6 @@ This repository contains the master thesis project for implementing an Automatic
 ## Table of Contents
 
 - [Overview](#overview)
-- [Installation](#installation)
 - [Folder Structure](#folder-structure)
 - [Contributing](#contributing)
 
@@ -15,12 +14,6 @@ This repository contains the master thesis project for implementing an Automatic
 
 Our work consists of a comprehensive study and implementation of a novel ATS system using state-of-the-art transformer models like T5, along with HuggingFace and OpusMT for efficient natural language understanding, processing, and translation. The ultimate goal is to create an effective, high-performing text summarization system that is both abstractive and efficient.
 
-## Installation
-
-1. Clone this repository:
-    ```
-    git clone https://github.com/[username]/[reponame].git
-    ```
 
 ## Folder Structure
 
