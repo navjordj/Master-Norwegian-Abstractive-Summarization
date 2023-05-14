@@ -8,7 +8,6 @@ This repository contains the master thesis project for implementing an Automatic
 
 - [Overview](#overview)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Folder Structure](#folder-structure)
 - [Contributing](#contributing)
 
@@ -22,12 +21,6 @@ Our work consists of a comprehensive study and implementation of a novel ATS sys
     ```
     git clone https://github.com/[username]/[reponame].git
     ```
-## Usage
-
-Navigate to the directory of the specific module you want to run, and execute the scripts using Python. For example, to run the T5 summarization script, navigate to the `t5_summarization` directory and run:
-```
-python t5_summarization_script.py
-```
 
 ## Folder Structure
 
