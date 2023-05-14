@@ -1,4 +1,0 @@
-mwparserfromhell
-apache_beam
-datasets
-mediawikiapi
